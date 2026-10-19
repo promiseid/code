@@ -1,0 +1,23 @@
+[
+  {
+    "name": "authenticated import without valid nonce rejected",
+    "pass": true,
+    "detail": {
+      "status": 403
+    }
+  },
+  {
+    "name": "child theme activates and loads parent and child CSS",
+    "pass": true,
+    "detail": {
+      "restoredParent": true
+    }
+  },
+  {
+    "name": "theme renders without WooCommerce",
+    "pass": true,
+    "detail": {
+      "reactivated": true
+    }
+  }
+]

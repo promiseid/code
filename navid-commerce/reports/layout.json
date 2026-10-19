@@ -1,0 +1,46 @@
+{
+  "360": {
+    "status": 200,
+    "title": "نویدشاپ – تکنولوژی خوب، حال خوب. انتخاب‌های تازه برای زندگی امروز.",
+    "language": "fa-IR",
+    "dir": "rtl",
+    "overflow": false,
+    "products": 8,
+    "fonts": true,
+    "badImages": [],
+    "errors": []
+  },
+  "390": {
+    "status": 200,
+    "title": "نویدشاپ – تکنولوژی خوب، حال خوب. انتخاب‌های تازه برای زندگی امروز.",
+    "language": "fa-IR",
+    "dir": "rtl",
+    "overflow": false,
+    "products": 8,
+    "fonts": true,
+    "badImages": [],
+    "errors": []
+  },
+  "768": {
+    "status": 200,
+    "title": "نویدشاپ – تکنولوژی خوب، حال خوب. انتخاب‌های تازه برای زندگی امروز.",
+    "language": "fa-IR",
+    "dir": "rtl",
+    "overflow": false,
+    "products": 8,
+    "fonts": true,
+    "badImages": [],
+    "errors": []
+  },
+  "1440": {
+    "status": 200,
+    "title": "نویدشاپ – تکنولوژی خوب، حال خوب. انتخاب‌های تازه برای زندگی امروز.",
+    "language": "fa-IR",
+    "dir": "rtl",
+    "overflow": false,
+    "products": 8,
+    "fonts": true,
+    "badImages": [],
+    "errors": []
+  }
+}

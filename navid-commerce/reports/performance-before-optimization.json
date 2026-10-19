@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-19T08:22:49.951Z",
+  "environment": "Local WordPress Playground / PHP WebAssembly, no page cache; not production hosting.",
+  "restored_from": "Recorded initial Lighthouse console summary in this conversation, before optimization.",
+  "formFactor": "mobile",
+  "throttling": {
+    "rttMs": 150,
+    "throughputKbps": 1638.4,
+    "requestLatencyMs": 562.5,
+    "downloadThroughputKbps": 1474.5600000000002,
+    "uploadThroughputKbps": 675,
+    "cpuSlowdownMultiplier": 4
+  },
+  "scores": {
+    "performance": 78,
+    "accessibility": 96,
+    "best-practices": 100,
+    "seo": 85
+  },
+  "metrics": {
+    "first-contentful-paint": {
+      "value": 3315.525,
+      "display": "3.3 s"
+    },
+    "largest-contentful-paint": {
+      "value": 3990.525,
+      "display": "4.0 s"
+    },
+    "speed-index": {
+      "value": 3780.33169800009,
+      "display": "3.8 s"
+    },
+    "total-blocking-time": {
+      "value": 0,
+      "display": "0 ms"
+    },
+    "cumulative-layout-shift": {
+      "value": 0.07918320929033398,
+      "display": "0.079"
+    },
+    "server-response-time": {
+      "value": 1633,
+      "display": "Root document took 1,630 ms"
+    },
+    "total-byte-weight": {
+      "value": 521050,
+      "display": "Total size was 509 KiB"
+    }
+  },
+  "warnings": []
+}

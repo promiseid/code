@@ -1,0 +1,322 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Navid Commerce 0.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+
+#: front-page.php
+msgid "%s محصول"
+msgstr ""
+
+#: front-page.php
+msgid "ارسال سفارش"
+msgstr ""
+
+#: front-page.php
+msgid "از انتخاب تا دریافت"
+msgstr ""
+
+#: front-page.php inc/customizer.php
+msgid "از اولین آهنگ صبح تا آخرین کار روز؛ همراه‌های تازه‌ات را اینجا پیدا کن."
+msgstr ""
+
+#: front-page.php
+msgid "از اینجا شروع کن"
+msgstr ""
+
+#: front-page.php
+msgid "انتخاب خوب، از جزئیات شروع می‌شود."
+msgstr ""
+
+#: inc/template-tags.php
+msgid "انتخابی برای هر روز شما"
+msgstr ""
+
+#: footer.php
+msgid "انتخابی تازه برای هر روز"
+msgstr ""
+
+#: front-page.php
+msgid "انتخاب‌های کوچک، تجربه‌های متفاوت"
+msgstr ""
+
+#: 404.php
+msgid "این صفحه را پیدا نکردیم."
+msgstr ""
+
+#: footer.php
+msgid "با خیال راحت انتخاب کن"
+msgstr ""
+
+#: footer.php
+msgid "بازگشت به بالا ↑"
+msgstr ""
+
+#: 404.php
+msgid "بازگشت به خانه"
+msgstr ""
+
+#: index.php
+msgid "بخوان، کشف کن، انتخاب کن"
+msgstr ""
+
+#: front-page.php
+msgid "برای نمایش محصولات، ووکامرس را نصب و فعال کنید. این پیام فقط برای مدیر نمایش داده می‌شود."
+msgstr ""
+
+#: front-page.php
+msgid "برای کار، برای بازی، برای زندگی"
+msgstr ""
+
+#: inc/customizer.php
+msgid "برچسب بالای بنر"
+msgstr ""
+
+#: front-page.php
+msgid "تازه به جمع ما رسیدند"
+msgstr ""
+
+#: inc/customizer.php
+msgid "تصویر بنر اصلی"
+msgstr ""
+
+#: front-page.php
+msgid "تصویر مفهومی هدفون بی‌سیم"
+msgstr ""
+
+#: inc/customizer.php
+msgid "تنظیمات نویدشاپ"
+msgstr ""
+
+#: inc/customizer.php
+msgid "توضیح بنر اصلی"
+msgstr ""
+
+#: front-page.php inc/customizer.php
+msgid "تکنولوژی خوب، حالِ خوب."
+msgstr ""
+
+#: front-page.php
+msgid "جزئیات شفاف هر محصول"
+msgstr ""
+
+#: searchform.php
+msgid "جستجو"
+msgstr ""
+
+#: searchform.php
+msgid "جستجو در فروشگاه"
+msgstr ""
+
+#: footer.php
+msgid "حریم خصوصی"
+msgstr ""
+
+#: footer.php
+msgid "حساب و سفارش‌های من"
+msgstr ""
+
+#: header.php
+msgid "حساب کاربری"
+msgstr ""
+
+#: front-page.php
+msgid "خرید با اطمینان"
+msgstr ""
+
+#: searchform.php
+msgid "دنبال چی می‌گردی؟"
+msgstr ""
+
+#: front-page.php
+msgid "دنیای مورد علاقه‌ات"
+msgstr ""
+
+#: front-page.php
+msgid "دیدن محصولات"
+msgstr ""
+
+#: front-page.php
+msgid "راهنمای خرید"
+msgstr ""
+
+#: header.php
+msgid "رفتن به محتوای اصلی"
+msgstr ""
+
+#: inc/customizer.php
+msgid "رنگ اصلی برند"
+msgstr ""
+
+#: front-page.php
+msgid "ریتم روزت را عوض کن."
+msgstr ""
+
+#: footer.php
+msgid "ساخته‌شده برای یک تجربه بهتر"
+msgstr ""
+
+#: footer.php
+msgid "سبد خرید"
+msgstr ""
+
+#: 404.php
+msgid "شاید محصول دلخواهت همین نزدیکی باشد."
+msgstr ""
+
+#: front-page.php
+msgid "شرایط بازگشت"
+msgstr ""
+
+#: footer.php
+msgid "شفاف، ساده، همراه شما"
+msgstr ""
+
+#: front-page.php
+msgid "صدایی که همراهت می‌ماند"
+msgstr ""
+
+#: front-page.php
+msgid "طبق روش انتخابی شما"
+msgstr ""
+
+#: inc/customizer.php
+msgid "عنوان بنر اصلی"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "فروشگاه"
+msgstr ""
+
+#: front-page.php
+msgid "فروشگاهت را آماده کن"
+msgstr ""
+
+#: functions.php header.php
+msgid "فهرست اصلی"
+msgstr ""
+
+#: header.php
+msgid "فهرست فروشگاه"
+msgstr ""
+
+#: functions.php
+msgid "فهرست پایین صفحه"
+msgstr ""
+
+#: functions.php
+msgid "فیلترهای فروشگاه"
+msgstr ""
+
+#: inc/woocommerce.php
+msgid "فیلترهای محصولات"
+msgstr ""
+
+#: inc/customizer.php
+msgid "متن دکمه بنر"
+msgstr ""
+
+#: inc/customizer.php
+msgid "متن پشتیبانی"
+msgstr ""
+
+#: inc/template-tags.php index.php
+msgid "مجله نوید"
+msgstr ""
+
+#: front-page.php
+msgid "محصولات را مقایسه کن، مشخصات را بخوان و چیزی را انتخاب کن که به زندگی‌ات می‌آید."
+msgstr ""
+
+#: header.php
+msgid "مشاهده سبد خرید؛ %s کالا"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "مشاهده همه"
+msgstr ""
+
+#: footer.php
+msgid "مشخصات، قیمت و وضعیت موجودی هر محصول را در صفحه آن ببین."
+msgstr ""
+
+#: inc/woocommerce.php
+msgid "ناموجود"
+msgstr ""
+
+#: index.php
+msgid "نتیجه جستجو: %s"
+msgstr ""
+
+#: inc/customizer.php
+msgid "نوار اطلاع‌رسانی"
+msgstr ""
+
+#: footer.php
+msgid "همراه خرید شما"
+msgstr ""
+
+#: front-page.php
+msgid "همراه شما"
+msgstr ""
+
+#: footer.php
+msgid "همه محصولات"
+msgstr ""
+
+#: header.php inc/customizer.php
+msgid "پاسخ‌گوی انتخاب شما هستیم"
+msgstr ""
+
+#: front-page.php
+msgid "پیش از خرید مطالعه کنید"
+msgstr ""
+
+#: front-page.php
+msgid "پیشنهادهای دوست‌داشتنی"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "پیشنهادهای ویژه"
+msgstr ""
+
+#: index.php
+msgid "چیزی پیدا نشد"
+msgstr ""
+
+#: front-page.php inc/customizer.php
+msgid "کالکشن تازه نویدشاپ"
+msgstr ""
+
+#: front-page.php
+msgid "کشف تازه‌ها"
+msgstr ""
+
+#: front-page.php inc/customizer.php
+msgid "کشف محصولات"
+msgstr ""
+
+#: front-page.php
+msgid "کشف محصولات فروشگاه"
+msgstr ""
+
+#: front-page.php
+msgid "گشتی در فروشگاه"
+msgstr ""
+
+#: footer.php
+msgid "گشت‌وگذار"
+msgstr ""
+
+#: comments.php
+msgid "گفت‌وگو"
+msgstr ""
+
+#: header.php inc/customizer.php
+msgid "یک انتخاب تازه، برای سبک زندگی امروز"
+msgstr ""
+
+#: front-page.php
+msgid "یک قدم هوشمندتر."
+msgstr ""
+

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "layout": { "contentSize": "880px", "wideSize": "1280px" },
+    "color": { "palette": [
+      { "slug": "brand", "name": "سبز نوید", "color": "#087f76" },
+      { "slug": "ink", "name": "متن", "color": "#16302e" },
+      { "slug": "sage", "name": "سبز روشن", "color": "#e7eeea" },
+      { "slug": "paper", "name": "سفید", "color": "#ffffff" }
+    ] },
+    "typography": { "fluid": true, "fontFamilies": [{ "fontFamily": "Vazirmatn, Tahoma, sans-serif", "slug": "vazirmatn", "name": "وزیرمتن" }] },
+    "spacing": { "units": ["px", "rem", "%", "vw"], "blockGap": true }
+  },
+  "styles": { "typography": { "fontFamily": "var:preset|font-family|vazirmatn", "lineHeight": "1.9" } }
+}

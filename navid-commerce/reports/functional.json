@@ -1,0 +1,77 @@
+[
+  {
+    "name": "home and accessibility",
+    "pass": true,
+    "detail": {
+      "products": 8,
+      "violations": 0
+    }
+  },
+  {
+    "name": "mobile menu and keyboard dismissal",
+    "pass": true
+  },
+  {
+    "name": "native product search",
+    "pass": true,
+    "detail": {
+      "url": "http://127.0.0.1:9400/product/navid-demo-wave/"
+    }
+  },
+  {
+    "name": "catalog sorting",
+    "pass": true,
+    "detail": {
+      "products": 8
+    }
+  },
+  {
+    "name": "simple add-to-cart and quantity update",
+    "pass": true,
+    "detail": {
+      "quantity": 2,
+      "headerCount": "2"
+    }
+  },
+  {
+    "name": "guest checkout with local cash-on-delivery gateway",
+    "pass": true,
+    "detail": {
+      "orderReceived": true,
+      "realPayment": false
+    }
+  },
+  {
+    "name": "variable product selection",
+    "pass": true,
+    "detail": {
+      "variationSelected": true,
+      "differentColorsResolveDifferentVariants": true
+    }
+  },
+  {
+    "name": "out-of-stock product",
+    "pass": true,
+    "detail": {
+      "purchaseDisabled": true
+    }
+  },
+  {
+    "name": "account and 404",
+    "pass": true
+  },
+  {
+    "name": "anonymous demo import blocked",
+    "pass": true,
+    "detail": {
+      "status": 400
+    }
+  },
+  {
+    "name": "no browser JavaScript errors",
+    "pass": true,
+    "detail": {
+      "errors": []
+    }
+  }
+]
