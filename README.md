@@ -1,12 +1,13 @@
-# نویدشاپ — Navid Commerce
+# نویدشاپ — Navid Commerce 0.2.0
 
-نسخه بازبینی قالب فروشگاهی فارسی وردپرس و ووکامرس، نسخه 0.1.0.
+قالب فروشگاهی فارسی برای وردپرس و ووکامرس، با طراحی اختصاصی و تمرکز بر سرعت، تجربه خرید و موبایل.
 
-- [مشاهده آنلاین فروشگاه با WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/playground/blueprint.json)
-- [ورود به پیشخوان آزمایشی](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/playground/admin.json)
-- [کد، بسته نصب و راهنمای فارسی](./navid-commerce/README-fa.md)
-- [توضیح محیط و اطلاعات ورود نمونه](./navid-commerce/playground/README-fa.md)
+- [مشاهده آنلاین نسخه جدید فروشگاه](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/playground/blueprint-0.2.0.json)
+- [پیشخوان فارسی آزمایشی](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/playground/admin-0.2.0.json)
+- [کد، بسته نصب و راهنمای قالب](./navid-commerce/README.md)
 
-پیش‌نمایش در هر مرورگر، وردپرس جداگانه‌ای می‌سازد. نام کاربری `admin` و رمز نمونه `NavidDemo!2026` فقط برای همین دمو است. این اطلاعات دسترسی به هاست یا فروشگاه دائمی نمی‌دهد.
+اطلاعات ورود دموی جداگانه در مرورگر: نام کاربری `admin` و رمز `NavidDemo!2026`. این دمو با WordPress Playground اجرا می‌شود و فروشگاه دائمی با پایگاه‌داده مشترک نیست. تغییرات را با امکانات ذخیره یا خروجی Playground نگه دارید.
 
-این نسخه برای بررسی است و هنوز تأیید تجاری راست‌چین یا ژاکت را ندارد. جزئیات آزمون‌ها در پوشه `navid-commerce/reports` و راهنمای پروژه آمده است.
+![طراحی نسخه ۰٫۲٫۰ در وردپرس](./navid-commerce/theme/navid-commerce/screenshot.png)
+
+این نسخه برای بازبینی و آماده‌سازی عرضه است و هنوز تأییدیه راست‌چین یا ژاکت را ندارد. گزارش آزمون‌ها و محدودیت‌ها همراه پروژه است.

@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.0 — 2026-10-19
+
+- Rebuilt the storefront layout, typography, header, illustrated category navigation, campaign banners, product cards, journal and footer.
+- Added a responsive, optimized studio hero image and recorded its generation prompt and provenance.
+- Added accessible native-dialog product previews using escaped existing public product data, with no custom endpoint or extra network request.
+- Show actual WooCommerce discount percentages, product categories and stock status; added archive category navigation.
+- Refined product details, gallery, prices, purchase forms and mobile access navigation while retaining native WooCommerce templates and purchase handling.
+- Expanded native Customizer controls for secondary campaign content, imagery, category and optional homepage sections.
+- Extended the optional, idempotent demo importer with three original sample articles.
+- Validated the purchase flow, keyboard behavior, responsive layouts, PHP syntax and selected WCAG checks. See TEST-REPORT-fa.md for measured results and limits.
+
 ## 0.1.0 — 2026-10-19
 
 - Initial Persian WooCommerce theme with a responsive shopping homepage.

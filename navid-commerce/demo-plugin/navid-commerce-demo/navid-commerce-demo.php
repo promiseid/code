@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Navid Commerce Demo
  * Description: درون‌ریزی اختیاری محصولات و برگه‌های نمایشی نویدشاپ. پس از درون‌ریزی قابل غیرفعال‌سازی است.
- * Version: 0.1.0
+ * Version: 0.2.0
  * Requires at least: 6.6
  * Requires PHP: 8.3
  * Author: Navid Bazrkar
@@ -95,7 +95,7 @@ function navid_demo_seed( $configure = false ) {
 				$attr->set_name( 'رنگ' ); $attr->set_options( array( 'سبز', 'مشکی' ) ); $attr->set_visible( true ); $attr->set_variation( true );
 				$product->set_attributes( array( $attr ) );
 			}
-			$product->update_meta_data( '_navid_demo_seed', '0.1.0' );
+			$product->update_meta_data( '_navid_demo_seed', '0.2.0' );
 			$id = $product->save();
 			if ( ! $id ) { ++$failed; continue; }
 			if ( 'variable' === $row[6] ) {
@@ -117,6 +117,20 @@ function navid_demo_seed( $configure = false ) {
 			++$created;
 		}
 		$pages = array( 'navid-home' => array( 'خانه', '' ), 'navid-journal' => array( 'مجله نوید', '' ), 'navid-about' => array( 'درباره ما', '<!-- wp:paragraph --><p>داستان فروشگاه و روش ارتباط با خود را اینجا بنویسید.</p><!-- /wp:paragraph -->' ), 'navid-delivery' => array( 'راهنمای ارسال و بازگشت', '<!-- wp:paragraph --><p>این متن نمونه است. روش‌های ارسال، هزینه‌ها، محدوده خدمت‌رسانی و سیاست بازگشت واقعی فروشگاه را پیش از انتشار درج کنید.</p><!-- /wp:paragraph -->' ) );
+		// Original sample articles; existing posts are never changed on repeated imports.
+		$guides = array(
+			array( 'navid-guide-sound', 'هدفون مناسب روزهای شما کدام است؟', 'WAVE', 'ظاهر زیبا شروع ماجراست؛ راحتی و سازگاری را هم بررسی کنید.', '<p>برای انتخاب هدفون، ابتدا به شیوه استفاده خود فکر کنید: تماس، کار متمرکز یا شنیدن موسیقی در مسیر. راحتی روی گوش و تناسب اندازه، در استفاده طولانی به اندازه ظاهر اهمیت دارد.</p><h2>سه نکته پیش از انتخاب</h2><p>نوع اتصال و سازگاری با دستگاهتان را بررسی کنید. شرایط اعلام‌شده برای عمر باتری را بخوانید و به روش شارژ توجه کنید. در پایان، مشخصات و شرایط خدمات فروشنده را کنار هم بگذارید و گزینه مناسب خود را انتخاب کنید.</p>' ),
+			array( 'navid-guide-watch', 'قبل از خرید ساعت هوشمند چه چیزهایی را بررسی کنیم؟', 'ORBIT', 'همراهی روزانه که باید با گوشی و نیازهای شما هماهنگ باشد.', '<p>ساعت هوشمند قرار است همراه روزمره شما باشد. پیش از خرید، سازگاری آن با سیستم‌عامل گوشی و امکاناتی را که واقعاً استفاده می‌کنید بررسی کنید.</p><h2>جزئیات کوچک، تفاوت‌های مهم</h2><p>اندازه و وزن ساعت، خوانایی نمایشگر، نوع بند و روش شارژ بر تجربه استفاده اثر می‌گذارند. مشخصات مقاومت در برابر آب و محدودیت‌های اعلام‌شده سازنده را دقیق بخوانید. ظاهر دلخواهتان را در کنار این جزئیات انتخاب کنید.</p>' ),
+			array( 'navid-guide-workspace', 'میز کاری که با شما هماهنگ است', 'FLOW', 'چند جزئیات ساده برای انتخاب لوازم فضای کار.', '<p>یک فضای کار مناسب با شناخت کارهای روزانه شکل می‌گیرد. پیش از خرید لوازم، فضای میز، دستگاه‌های مورد استفاده و نوع اتصال آن‌ها را در نظر بگیرید.</p><h2>جای هر چیز را مشخص کنید</h2><p>برای صفحه‌کلید، اندازه و چیدمان کلیدها را بررسی کنید. برای ماوس، به تناسب اندازه و شیوه استفاده توجه کنید. تعداد درگاه‌ها و مدیریت کابل‌ها را هم در انتخاب‌هایتان لحاظ کنید تا ابزارهای تازه با فضای موجود هماهنگ باشند.</p>' ),
+		);
+		foreach ( $guides as $guide ) {
+			if ( get_page_by_path( $guide[0], OBJECT, 'post' ) ) { continue; }
+			$guide_id = wp_insert_post( array( 'post_type' => 'post', 'post_status' => 'publish', 'post_name' => $guide[0], 'post_title' => $guide[1], 'post_excerpt' => $guide[3], 'post_content' => $guide[4] ), true );
+			if ( is_wp_error( $guide_id ) || ! $guide_id ) { continue; }
+			update_post_meta( $guide_id, '_navid_demo_seed', '0.2.0' );
+			$guide_product = wc_get_product( wc_get_product_id_by_sku( 'NAVID-DEMO-' . $guide[2] ) );
+			if ( $guide_product && $guide_product->get_image_id() ) { set_post_thumbnail( $guide_id, $guide_product->get_image_id() ); }
+		}
 		$page_ids = array();
 		foreach ( $pages as $slug => $values ) {
 			$existing_page = get_page_by_path( $slug );

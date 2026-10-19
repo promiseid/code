@@ -1,0 +1,12 @@
+{
+  "asset": "Navid Commerce studio headphone hero",
+  "mode": "built-in image_gen",
+  "kind": "AI-generated fictional, unbranded product concept",
+  "prompt": "Use case: product-mockup. Asset type: hero image for an original premium Persian electronics ecommerce WordPress theme. Create a high-end photorealistic studio product photograph of one unbranded wireless over-ear headphone in warm ivory and champagne aluminum, angled three-quarter view, standing on a low sculptural cylindrical ivory plinth. Beautiful precise industrial design, realistic woven ear cushions, softly brushed metal, tactile materials. Pale very light desaturated sage-gray seamless background (#e8eeeb), subtle architectural curved backdrop, refined soft natural studio shadows, gentle side light, editorial luxury technology art direction. The headphones fill about 70% of this LANDSCAPE image; entire product visible with ample margin, weighted slightly left of center. No words, no lettering, no logos, no watermarks, no graphics, no people, no extra products. Keep background light, avoid dark or dramatic black lighting. The image will sit on the left side of an RTL hero beside real HTML typography, so no text should be drawn into the image. Output landscape 1536x1024.",
+  "outputs": [
+    "theme/navid-commerce/assets/images/hero-studio-640.webp",
+    "theme/navid-commerce/assets/images/hero-studio-1000.webp"
+  ],
+  "processing": "Proportional resize and WebP compression with Sharp; no compositing or object edits",
+  "usage": "Bundled theme demonstration imagery; replace with real product photography for a real store"
+}

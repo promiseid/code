@@ -14,6 +14,10 @@ function navid_commerce_woo_hooks() {
 	add_action( 'woocommerce_before_shop_loop_item_title', 'navid_commerce_card_top', 5 );
 	add_action( 'woocommerce_before_shop_loop_item_title', 'navid_commerce_card_top_end', 20 );
 	add_action( 'woocommerce_after_shop_loop_item_title', 'navid_commerce_card_availability', 15 );
+	add_action( 'woocommerce_shop_loop_item_title', 'navid_commerce_card_category', 5 );
+	add_action( 'woocommerce_after_shop_loop_item', 'navid_commerce_quickview_button', 7 );
+	add_action( 'woocommerce_after_single_product_summary', 'navid_commerce_product_assurance', 5 );
+	add_action( 'wp_footer', 'navid_commerce_quickview_dialog', 5 );
 	add_action( 'woocommerce_after_cart_table', 'navid_commerce_cart_state' );
 	add_action( 'woocommerce_cart_is_empty', 'navid_commerce_cart_state' );
 }
@@ -28,6 +32,78 @@ function navid_commerce_woo_start() {
 	}
 	echo '<div class="shop-content">';
 }
+
+function navid_commerce_card_category() {
+	global $product;
+	if ( ! $product instanceof WC_Product ) { return; }
+	$terms = get_the_terms( $product->get_id(), 'product_cat' );
+	if ( $terms && ! is_wp_error( $terms ) ) {
+		echo '<span class="product-category-label">' . esc_html( $terms[0]->name ) . '</span>';
+	}
+}
+
+/** All preview data is public, escaped display data; there is no custom endpoint. */
+function navid_commerce_quickview_button() {
+	global $product;
+	if ( ! $product instanceof WC_Product || ! get_theme_mod( 'navid_enable_quickview', true ) ) { return; }
+	$price = $product->is_type( 'variable' ) ? $product->get_variation_price( 'min' ) : $product->get_price();
+	$regular = $product->is_type( 'variable' ) ? '' : $product->get_regular_price();
+	$plain_price = static function ( $amount ) use ( $product ) {
+		return '' === $amount ? '' : html_entity_decode( wp_strip_all_tags( wc_price( wc_get_price_to_display( $product, array( 'price' => (float) $amount ) ) ) ), ENT_QUOTES, 'UTF-8' );
+	};
+	$image = wp_get_attachment_image_url( $product->get_image_id(), 'woocommerce_single' );
+	$data = array( 'name' => $product->get_name(), 'url' => esc_url_raw( $product->get_permalink() ), 'image' => esc_url_raw( $image ? $image : wc_placeholder_img_src() ), 'price' => ( $product->is_type( 'variable' ) ? __( 'از ', 'navid-commerce' ) : '' ) . $plain_price( $price ), 'regular' => $product->is_on_sale() ? $plain_price( $regular ) : '', 'description' => wp_trim_words( wp_strip_all_tags( $product->get_short_description() ), 45, '…' ), 'stock' => $product->is_in_stock() ? __( 'موجود و قابل سفارش', 'navid-commerce' ) : __( 'در حال حاضر ناموجود', 'navid-commerce' ), 'inStock' => $product->is_in_stock() );
+	echo '<button type="button" class="nc-quickview" aria-haspopup="dialog" aria-controls="nc-product-preview" aria-label="' . esc_attr( sprintf( __( 'پیش‌نمایش سریع: %s', 'navid-commerce' ), $product->get_name() ) ) . '" data-product-preview="' . esc_attr( wp_json_encode( $data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) ) . '">';
+	navid_commerce_icon( 'eye' );
+	echo '</button>';
+}
+
+function navid_commerce_quickview_dialog() {
+	if ( ! get_theme_mod( 'navid_enable_quickview', true ) ) { return; }
+	?>
+	<dialog class="nc-preview" id="nc-product-preview" aria-labelledby="nc-preview-title">
+		<button type="button" class="nc-preview-close" aria-label="<?php esc_attr_e( 'بستن پیش‌نمایش', 'navid-commerce' ); ?>"><?php navid_commerce_icon( 'close' ); ?></button>
+		<div class="nc-preview-layout"><div class="nc-preview-visual"><img class="nc-preview-image" width="600" height="600" alt=""></div><div class="nc-preview-copy"><span class="eyebrow"><?php esc_html_e( 'نگاهی نزدیک‌تر به انتخاب شما', 'navid-commerce' ); ?></span><h2 id="nc-preview-title"></h2><span class="nc-preview-stock"></span><p class="nc-preview-description"></p><div class="nc-preview-prices"><del class="nc-preview-regular"></del><strong class="nc-preview-price"></strong></div><a class="button button-dark nc-preview-link"><?php esc_html_e( 'مشخصات و خرید محصول', 'navid-commerce' ); ?><?php navid_commerce_icon( 'arrow' ); ?></a><small><?php esc_html_e( 'انتخاب ویژگی‌ها و افزودن به سبد در صفحه محصول', 'navid-commerce' ); ?></small></div></div>
+	</dialog>
+	<?php
+}
+
+function navid_commerce_product_assurance() {
+	echo '<div class="product-assurance">';
+	foreach ( array( array( 'shield', __( 'جزئیات شفاف محصول', 'navid-commerce' ) ), array( 'truck', __( 'روش ارسال در تسویه‌حساب', 'navid-commerce' ) ), array( 'headset', __( 'پیگیری از حساب کاربری', 'navid-commerce' ) ) ) as $item ) {
+		echo '<span>'; navid_commerce_icon( $item[0] ); echo esc_html( $item[1] ) . '</span>';
+	}
+	echo '</div>';
+}
+
+function navid_commerce_sale_badge( $html, $post, $product ) {
+	$discount = 0;
+	if ( $product->is_type( 'variable' ) ) {
+		$prices = $product->get_variation_prices();
+		foreach ( $prices['regular_price'] as $key => $regular ) {
+			if ( (float) $regular > 0 && isset( $prices['price'][ $key ] ) ) {
+				$discount = max( $discount, (int) round( 100 * ( (float) $regular - (float) $prices['price'][ $key ] ) / (float) $regular ) );
+			}
+		}
+	} elseif ( (float) $product->get_regular_price() > 0 ) {
+		$discount = (int) round( 100 * ( (float) $product->get_regular_price() - (float) $product->get_price() ) / (float) $product->get_regular_price() );
+	}
+	return $discount > 0 ? '<span class="onsale">' . esc_html( sprintf( __( '%s٪ تخفیف', 'navid-commerce' ), number_format_i18n( $discount ) ) ) . '</span>' : $html;
+}
+add_filter( 'woocommerce_sale_flash', 'navid_commerce_sale_badge', 10, 3 );
+
+function navid_commerce_catalog_categories() {
+	if ( ! ( is_shop() || is_product_taxonomy() ) ) { return; }
+	$categories = navid_commerce_categories();
+	if ( ! $categories ) { return; }
+	echo '<nav class="catalog-categories" aria-label="' . esc_attr__( 'مرور دسته‌های فروشگاه', 'navid-commerce' ) . '"><a href="' . esc_url( navid_commerce_shop_url() ) . '" ' . ( is_shop() ? 'aria-current="page"' : '' ) . '>' . esc_html__( 'همه محصولات', 'navid-commerce' ) . '</a>';
+	foreach ( $categories as $term ) {
+		$url = get_term_link( $term ); if ( is_wp_error( $url ) ) { continue; }
+		echo '<a href="' . esc_url( $url ) . '" ' . ( is_product_category( $term->term_id ) ? 'aria-current="page"' : '' ) . '>' . esc_html( $term->name ) . '</a>';
+	}
+	echo '</nav>';
+}
+add_action( 'woocommerce_before_shop_loop', 'navid_commerce_catalog_categories', 15 );
 
 function navid_commerce_woo_end() {
 	echo '</div></div></main>';
@@ -73,21 +149,19 @@ function navid_commerce_loop_columns() {
 add_filter( 'loop_shop_columns', 'navid_commerce_loop_columns' );
 
 /** The custom landing page supplies its own product grid styles. */
-function navid_commerce_woo_styles( $styles ) {
-	if ( ! is_front_page() ) {
-		return $styles;
-	}
+function navid_commerce_light_home() {
+	if ( ! is_front_page() ) { return false; }
 	$content = (string) get_post_field( 'post_content', get_queried_object_id() );
-	foreach ( array( 'woocommerce_cart', 'woocommerce_checkout', 'woocommerce_my_account' ) as $shortcode ) {
+	foreach ( array( 'woocommerce_cart', 'woocommerce_checkout', 'woocommerce_my_account', 'product_page' ) as $shortcode ) {
 		if ( has_shortcode( $content, $shortcode ) ) {
-			return $styles;
+			return false;
 		}
 	}
-	foreach ( array( 'woocommerce/cart', 'woocommerce/checkout', 'woocommerce/product-reviews' ) as $block ) {
-		if ( has_block( $block, $content ) ) {
-			return $styles;
-		}
-	}
+	return false === strpos( $content, '<!-- wp:woocommerce/' );
+}
+
+function navid_commerce_woo_styles( $styles ) {
+	if ( ! navid_commerce_light_home() ) { return $styles; }
 	unset( $styles['woocommerce-general'], $styles['woocommerce-layout'], $styles['woocommerce-smallscreen'] );
 	return $styles;
 }

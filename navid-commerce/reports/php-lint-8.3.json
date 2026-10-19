@@ -3,6 +3,7 @@
   "files": {
     "child-theme/navid-commerce-child/functions.php": "PASS",
     "demo-plugin/navid-commerce-demo/navid-commerce-demo.php": "PASS",
+    "playground/setup-demo.php": "PASS",
     "theme/navid-commerce/404.php": "PASS",
     "theme/navid-commerce/comments.php": "PASS",
     "theme/navid-commerce/footer.php": "PASS",

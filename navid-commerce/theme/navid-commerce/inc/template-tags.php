@@ -20,6 +20,12 @@ function navid_commerce_icon( $name, $class = '' ) {
 		'camera' => '<path d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4"/>',
 		'bolt' => '<path d="m14 2-10 12h7l-1 8 10-12h-7l1-8Z"/>',
 		'close' => '<path d="m6 6 12 12M6 18 18 6"/>',
+		'chevron' => '<path d="m6 9 6 6 6-6"/>',
+		'eye' => '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>',
+		'grid' => '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+		'spark' => '<path d="m12 2 2.7 7.3L22 12l-7.3 2.7L12 22l-2.7-7.3L2 12l7.3-2.7L12 2Z"/>',
+		'check' => '<path d="m5 12 4 4L19 6"/>',
+		'home' => '<path d="m3 10 9-7 9 7v11h-7v-7h-4v7H3V10Z"/>',
 	);
 	if ( ! isset( $paths[ $name ] ) ) {
 		return;
@@ -32,6 +38,40 @@ function navid_commerce_icon( $name, $class = '' ) {
 
 function navid_commerce_shop_url() {
 	return function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'shop' ) : home_url( '/' );
+}
+
+/** Reuse a single bounded taxonomy query across the header and home page. */
+function navid_commerce_categories() {
+	static $categories = null;
+	if ( null === $categories ) {
+		$categories = taxonomy_exists( 'product_cat' ) ? get_terms( array( 'taxonomy' => 'product_cat', 'hide_empty' => true, 'parent' => 0, 'number' => 8, 'exclude' => array( absint( get_option( 'default_product_cat' ) ) ) ) ) : array();
+		if ( is_wp_error( $categories ) ) { $categories = array(); }
+	}
+	return $categories;
+}
+
+function navid_commerce_collection_url( $slug = '', $setting = '' ) {
+	$id = $setting ? absint( get_theme_mod( $setting, 0 ) ) : 0;
+	$term = $id ? get_term( $id, 'product_cat' ) : ( $slug && taxonomy_exists( 'product_cat' ) ? get_term_by( 'slug', $slug, 'product_cat' ) : false );
+	if ( $term && ! is_wp_error( $term ) ) {
+		$url = get_term_link( $term );
+		if ( ! is_wp_error( $url ) ) { return $url; }
+	}
+	return navid_commerce_shop_url();
+}
+
+function navid_commerce_category_art( $term ) {
+	$thumbnail = absint( get_term_meta( $term->term_id, 'thumbnail_id', true ) );
+	if ( $thumbnail ) {
+		echo wp_get_attachment_image( $thumbnail, 'woocommerce_thumbnail', false, array( 'loading' => 'lazy', 'alt' => '' ) );
+		return;
+	}
+	$map = array( 'headphones' => 'headphones', 'laptops' => 'keyboard', 'mobiles' => 'phone', 'watches' => 'watch', 'gaming' => 'gamepad', 'cameras' => 'camera' );
+	if ( isset( $map[ $term->slug ] ) ) {
+		echo '<img src="' . esc_url( get_theme_file_uri( '/assets/images/' . $map[ $term->slug ] . '.svg' ) ) . '" width="120" height="110" loading="lazy" alt="">';
+	} else {
+		navid_commerce_icon( 'bag' );
+	}
 }
 
 function navid_commerce_fallback_menu() {
@@ -54,8 +94,10 @@ function navid_commerce_product_section( $title, $args = array(), $id = '' ) {
 		return;
 	}
 	?>
-	<section class="product-section container woocommerce" <?php echo $id ? 'id="' . esc_attr( $id ) . '"' : ''; ?> aria-label="<?php echo esc_attr( $title ); ?>">
-		<div class="section-heading"><div><span class="eyebrow"><?php esc_html_e( 'انتخابی برای هر روز شما', 'navid-commerce' ); ?></span><h2><?php echo esc_html( $title ); ?></h2></div><a class="text-link" href="<?php echo esc_url( navid_commerce_shop_url() ); ?>"><?php esc_html_e( 'مشاهده همه', 'navid-commerce' ); ?> <?php navid_commerce_icon( 'arrow' ); ?></a></div>
+	<section class="product-section container woocommerce <?php echo 'offers' === $id ? 'offers-section' : ''; ?>" <?php echo $id ? 'id="' . esc_attr( $id ) . '"' : ''; ?> aria-label="<?php echo esc_attr( $title ); ?>">
+		<div class="section-heading"><div><span class="eyebrow"><?php echo 'offers' === $id ? esc_html__( 'فرصتی برای یک انتخاب بهتر', 'navid-commerce' ) : esc_html__( 'تازه‌های فروشگاه', 'navid-commerce' ); ?></span><h2><?php echo esc_html( $title ); ?><span class="heading-dot" aria-hidden="true"></span></h2></div><a class="text-link" href="<?php echo esc_url( navid_commerce_shop_url() ); ?>"><?php esc_html_e( 'مشاهده همه محصولات', 'navid-commerce' ); ?> <?php navid_commerce_icon( 'arrow' ); ?></a></div>
+		<div class="<?php echo 'offers' === $id ? 'offer-shell' : 'products-shell'; ?>">
+		<?php if ( 'offers' === $id ) : ?><div class="offer-intro"><span class="offer-symbol" aria-hidden="true"><?php navid_commerce_icon( 'spark' ); ?></span><span class="eyebrow">THE GOOD FINDS</span><h3><?php esc_html_e( 'انتخاب خوب،', 'navid-commerce' ); ?><br><?php esc_html_e( 'قیمت بهتر.', 'navid-commerce' ); ?></h3><p><?php esc_html_e( 'محصولات تخفیف‌دار فروشگاه، یک‌جا برای شما.', 'navid-commerce' ); ?></p><a href="<?php echo esc_url( navid_commerce_shop_url() ); ?>"><?php esc_html_e( 'گشتی در فروشگاه', 'navid-commerce' ); ?><?php navid_commerce_icon( 'arrow' ); ?></a></div><?php endif; ?>
 		<?php
 		wc_set_loop_prop( 'columns', 4 );
 		woocommerce_product_loop_start();
@@ -69,6 +111,7 @@ function navid_commerce_product_section( $title, $args = array(), $id = '' ) {
 		wp_reset_postdata();
 		wc_reset_loop();
 		?>
+		</div>
 	</section>
 	<?php
 }

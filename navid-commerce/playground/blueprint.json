@@ -1,9 +1,9 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "نویدشاپ — Navid Commerce 0.1.0",
+    "title": "نویدشاپ — Navid Commerce 0.2.0",
     "author": "promiseid",
-    "description": "Isolated Persian WooCommerce review demo. Public demo login: admin / NavidDemo!2026."
+    "description": "Redesigned Persian WooCommerce review demo. Isolated browser WordPress. Login: admin / NavidDemo!2026."
   },
   "landingPage": "/",
   "preferredVersions": {
@@ -32,7 +32,7 @@
       "step": "installTheme",
       "themeData": {
         "resource": "url",
-        "url": "https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/navid-commerce-0.1.0.zip"
+        "url": "https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/navid-commerce-0.2.0.zip"
       },
       "options": {
         "activate": true
@@ -42,7 +42,7 @@
       "step": "installPlugin",
       "pluginData": {
         "resource": "url",
-        "url": "https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/navid-commerce-demo-0.1.0.zip"
+        "url": "https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/navid-commerce-demo-0.2.0.zip"
       },
       "options": {
         "activate": true

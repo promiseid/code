@@ -1,0 +1,85 @@
+[
+  {
+    "name": "category menu supports keyboard dismissal and actual taxonomy links",
+    "pass": true,
+    "detail": {
+      "categories": 6,
+      "escapeReturnsFocus": true
+    }
+  },
+  {
+    "name": "home AJAX add-to-cart updates the accessible header count",
+    "pass": true,
+    "detail": {
+      "ajaxCartUpdated": true
+    }
+  },
+  {
+    "name": "WordPress keeps jQuery in the header when a declared header dependency requires it",
+    "pass": true,
+    "detail": {
+      "headerDependencyRespected": true,
+      "defaultHomeFooterPlacement": true
+    }
+  },
+  {
+    "name": "quick view displays correct public product and restores keyboard focus",
+    "pass": true,
+    "detail": {
+      "name": "ماوس بی‌سیم مدل Arc",
+      "accessibilityViolations": 0
+    }
+  },
+  {
+    "name": "preview renders product strings as text and never as injected markup",
+    "pass": true,
+    "detail": {
+      "unsafeMarkupIsText": true
+    }
+  },
+  {
+    "name": "mobile quick view and bottom navigation remain usable",
+    "pass": true,
+    "detail": {
+      "dockLinks": 4,
+      "dialogFits": true
+    }
+  },
+  {
+    "name": "sample editorial content is present",
+    "pass": true,
+    "detail": {
+      "articles": 3
+    }
+  },
+  {
+    "name": "catalog and product layouts fit mobile and desktop",
+    "pass": true,
+    "detail": [
+      {
+        "route": "/shop/",
+        "width": 390
+      },
+      {
+        "route": "/product/navid-demo-wave/",
+        "width": 390
+      },
+      {
+        "route": "/shop/",
+        "width": 1440
+      },
+      {
+        "route": "/product/navid-demo-wave/",
+        "width": 1440
+      }
+    ]
+  },
+  {
+    "name": "navigation and product links work without JavaScript",
+    "pass": true,
+    "detail": {
+      "nativeLinks": true,
+      "hiddenInertControls": true
+    }
+  }
+]

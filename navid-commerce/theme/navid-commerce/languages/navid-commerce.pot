@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Navid Commerce 0.1.0\n"
+"Project-Id-Version: Navid Commerce 0.2.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "MIME-Version: 1.0\n"
 
@@ -8,48 +8,80 @@ msgstr ""
 msgid "%s محصول"
 msgstr ""
 
+#: inc/woocommerce.php
+msgid "%s٪ تخفیف"
+msgstr ""
+
 #: front-page.php
 msgid "ارسال سفارش"
 msgstr ""
 
-#: front-page.php
-msgid "از انتخاب تا دریافت"
-msgstr ""
-
-#: front-page.php inc/customizer.php
-msgid "از اولین آهنگ صبح تا آخرین کار روز؛ همراه‌های تازه‌ات را اینجا پیدا کن."
+#: inc/woocommerce.php
+msgid "از "
 msgstr ""
 
 #: front-page.php
-msgid "از اینجا شروع کن"
+msgid "از بررسی تا دریافت"
 msgstr ""
 
 #: front-page.php
-msgid "انتخاب خوب، از جزئیات شروع می‌شود."
+msgid "از علاقه‌ات شروع کن"
 msgstr ""
 
-#: inc/template-tags.php
-msgid "انتخابی برای هر روز شما"
+#: inc/customizer.php
+msgid "اسکریپت‌های استاندارد صفحه نخست در پایین صفحه قرار می‌گیرند. اگر افزونه‌ای به اجرای زودهنگام اسکریپت وابسته است، می‌توانید این گزینه را خاموش کنید."
 msgstr ""
 
 #: footer.php
-msgid "انتخابی تازه برای هر روز"
+msgid "انتخاب آگاهانه از همین‌جا شروع می‌شود. جزئیات محصولات را ببینید و همراه مناسب خود را پیدا کنید."
+msgstr ""
+
+#: front-page.php inc/customizer.php
+msgid "انتخاب بعدی من"
 msgstr ""
 
 #: front-page.php
-msgid "انتخاب‌های کوچک، تجربه‌های متفاوت"
+msgid "انتخاب بهتر، با مجله نوید"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "انتخاب خوب،"
+msgstr ""
+
+#: front-page.php
+msgid "انتخاب خودت را پیدا کن"
+msgstr ""
+
+#: inc/customizer.php
+msgid "انتخاب خودکار"
+msgstr ""
+
+#: inc/woocommerce.php
+msgid "انتخاب ویژگی‌ها و افزودن به سبد در صفحه محصول"
+msgstr ""
+
+#: header.php inc/customizer.php
+msgid "انتخاب‌های تازه برای زندگی امروز"
+msgstr ""
+
+#: front-page.php
+msgid "انتخاب‌های ویژه نوید"
 msgstr ""
 
 #: 404.php
 msgid "این صفحه را پیدا نکردیم."
 msgstr ""
 
-#: footer.php
-msgid "با خیال راحت انتخاب کن"
+#: front-page.php
+msgid "با روش انتخابی شما"
+msgstr ""
+
+#: inc/customizer.php
+msgid "بارگذاری سبک صفحه نخست"
 msgstr ""
 
 #: footer.php
-msgid "بازگشت به بالا ↑"
+msgid "بازگشت به بالا"
 msgstr ""
 
 #: 404.php
@@ -58,6 +90,14 @@ msgstr ""
 
 #: index.php
 msgid "بخوان، کشف کن، انتخاب کن"
+msgstr ""
+
+#: footer.php
+msgid "برای روزهای بهتر."
+msgstr ""
+
+#: front-page.php inc/customizer.php
+msgid "برای سلیقه‌ای که فرق دارد"
 msgstr ""
 
 #: front-page.php
@@ -72,16 +112,36 @@ msgstr ""
 msgid "برچسب بالای بنر"
 msgstr ""
 
+#: inc/woocommerce.php
+msgid "بستن پیش‌نمایش"
+msgstr ""
+
 #: front-page.php
-msgid "تازه به جمع ما رسیدند"
+msgid "به سبک خودت."
+msgstr ""
+
+#: footer.php
+msgid "بیشتر درباره فروشگاه"
+msgstr ""
+
+#: front-page.php
+msgid "تازه به نوید رسیدند"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "تازه‌های فروشگاه"
+msgstr ""
+
+#: front-page.php
+msgid "تجربه‌های متفاوت."
 msgstr ""
 
 #: inc/customizer.php
 msgid "تصویر بنر اصلی"
 msgstr ""
 
-#: front-page.php
-msgid "تصویر مفهومی هدفون بی‌سیم"
+#: inc/customizer.php
+msgid "تصویر بنر کناری"
 msgstr ""
 
 #: inc/customizer.php
@@ -92,12 +152,20 @@ msgstr ""
 msgid "توضیح بنر اصلی"
 msgstr ""
 
+#: inc/customizer.php
+msgid "توضیح بنر کناری"
+msgstr ""
+
 #: front-page.php inc/customizer.php
-msgid "تکنولوژی خوب، حالِ خوب."
+msgid "تکنولوژی، به سبک تو."
+msgstr ""
+
+#: inc/woocommerce.php
+msgid "جزئیات شفاف محصول"
 msgstr ""
 
 #: front-page.php
-msgid "جزئیات شفاف هر محصول"
+msgid "جزئیات کوچک."
 msgstr ""
 
 #: searchform.php
@@ -108,8 +176,16 @@ msgstr ""
 msgid "جستجو در فروشگاه"
 msgstr ""
 
+#: front-page.php
+msgid "جهان را روی"
+msgstr ""
+
 #: footer.php
 msgid "حریم خصوصی"
+msgstr ""
+
+#: footer.php
+msgid "حساب من"
 msgstr ""
 
 #: footer.php
@@ -120,20 +196,56 @@ msgstr ""
 msgid "حساب کاربری"
 msgstr ""
 
+#: footer.php
+msgid "خانه"
+msgstr ""
+
 #: front-page.php
-msgid "خرید با اطمینان"
+msgid "خرید آگاهانه"
+msgstr ""
+
+#: front-page.php
+msgid "خواندن نوشته"
+msgstr ""
+
+#: header.php
+msgid "خوش آمدید"
+msgstr ""
+
+#: header.php
+msgid "خوش آمدید حساب کاربری"
+msgstr ""
+
+#: inc/woocommerce.php
+msgid "در حال حاضر ناموجود"
+msgstr ""
+
+#: footer.php
+msgid "دسترسی سریع فروشگاه"
+msgstr ""
+
+#: inc/customizer.php
+msgid "دسته مقصد بنر کناری"
+msgstr ""
+
+#: header.php
+msgid "دسته‌بندی محصولات"
 msgstr ""
 
 #: searchform.php
 msgid "دنبال چی می‌گردی؟"
 msgstr ""
 
-#: front-page.php
-msgid "دنیای مورد علاقه‌ات"
+#: header.php
+msgid "دنیای انتخاب‌های شما"
 msgstr ""
 
 #: front-page.php
-msgid "دیدن محصولات"
+msgid "دنیای تو، انتخاب تو"
+msgstr ""
+
+#: front-page.php
+msgid "دنیای هدفون و صدا"
 msgstr ""
 
 #: front-page.php
@@ -148,12 +260,12 @@ msgstr ""
 msgid "رنگ اصلی برند"
 msgstr ""
 
-#: front-page.php
-msgid "ریتم روزت را عوض کن."
+#: inc/woocommerce.php
+msgid "روش ارسال در تسویه‌حساب"
 msgstr ""
 
 #: footer.php
-msgid "ساخته‌شده برای یک تجربه بهتر"
+msgid "ساخته‌شده با توجه به جزئیات"
 msgstr ""
 
 #: footer.php
@@ -168,28 +280,44 @@ msgstr ""
 msgid "شرایط بازگشت"
 msgstr ""
 
-#: footer.php
-msgid "شفاف، ساده، همراه شما"
+#: front-page.php
+msgid "شفاف، پیش از خرید"
 msgstr ""
 
 #: front-page.php
-msgid "صدایی که همراهت می‌ماند"
+msgid "طراحی خوب. انتخاب بهتر."
 msgstr ""
 
 #: front-page.php
-msgid "طبق روش انتخابی شما"
+msgid "طراحی مفهومی هدفون با بدنه فلزی و بالشتک پارچه‌ای"
 msgstr ""
 
 #: inc/customizer.php
 msgid "عنوان بنر اصلی"
 msgstr ""
 
+#: inc/customizer.php
+msgid "عنوان بنر کناری"
+msgstr ""
+
 #: inc/template-tags.php
+msgid "فرصتی برای یک انتخاب بهتر"
+msgstr ""
+
+#: footer.php inc/template-tags.php
 msgid "فروشگاه"
 msgstr ""
 
 #: front-page.php
 msgid "فروشگاهت را آماده کن"
+msgstr ""
+
+#: front-page.php
+msgid "فضای کارت،"
+msgstr ""
+
+#: inc/customizer.php
+msgid "فعال بودن پیش‌نمایش سریع محصول"
 msgstr ""
 
 #: functions.php header.php
@@ -212,6 +340,14 @@ msgstr ""
 msgid "فیلترهای محصولات"
 msgstr ""
 
+#: inc/template-tags.php
+msgid "قیمت بهتر."
+msgstr ""
+
+#: front-page.php
+msgid "ما به انتخاب‌هایی فکر می‌کنیم که هر روز کنارمان هستند. مشخصات را بخوان، گزینه‌ها را ببین و چیزی را پیدا کن که با زندگی تو هماهنگ است."
+msgstr ""
+
 #: inc/customizer.php
 msgid "متن دکمه بنر"
 msgstr ""
@@ -220,12 +356,16 @@ msgstr ""
 msgid "متن پشتیبانی"
 msgstr ""
 
-#: inc/template-tags.php index.php
+#: front-page.php inc/template-tags.php index.php
 msgid "مجله نوید"
 msgstr ""
 
-#: front-page.php
-msgid "محصولات را مقایسه کن، مشخصات را بخوان و چیزی را انتخاب کن که به زندگی‌ات می‌آید."
+#: inc/template-tags.php
+msgid "محصولات تخفیف‌دار فروشگاه، یک‌جا برای شما."
+msgstr ""
+
+#: inc/woocommerce.php
+msgid "مرور دسته‌های فروشگاه"
 msgstr ""
 
 #: header.php
@@ -233,11 +373,27 @@ msgid "مشاهده سبد خرید؛ %s کالا"
 msgstr ""
 
 #: inc/template-tags.php
-msgid "مشاهده همه"
+msgid "مشاهده همه محصولات"
+msgstr ""
+
+#: inc/woocommerce.php
+msgid "مشخصات و خرید محصول"
+msgstr ""
+
+#: front-page.php
+msgid "مشخصات و قیمت شفاف"
 msgstr ""
 
 #: footer.php
-msgid "مشخصات، قیمت و وضعیت موجودی هر محصول را در صفحه آن ببین."
+msgid "مشخصات، قیمت و شرایط هر محصول را پیش از خرید در صفحه آن بررسی کنید."
+msgstr ""
+
+#: front-page.php
+msgid "موج خودت بشنو."
+msgstr ""
+
+#: inc/woocommerce.php
+msgid "موجود و قابل سفارش"
 msgstr ""
 
 #: inc/woocommerce.php
@@ -249,51 +405,83 @@ msgid "نتیجه جستجو: %s"
 msgstr ""
 
 #: inc/customizer.php
+msgid "نمایش بنرهای کالکشن"
+msgstr ""
+
+#: inc/customizer.php
+msgid "نمایش دسته‌بندی‌های تصویری"
+msgstr ""
+
+#: inc/customizer.php
+msgid "نمایش راهنمای خدمات"
+msgstr ""
+
+#: inc/customizer.php
+msgid "نمایش نوار دسترسی موبایل"
+msgstr ""
+
+#: inc/customizer.php
+msgid "نمایش نوشته‌های مجله"
+msgstr ""
+
+#: inc/customizer.php
 msgid "نوار اطلاع‌رسانی"
+msgstr ""
+
+#: inc/woocommerce.php
+msgid "نگاهی نزدیک‌تر به انتخاب شما"
+msgstr ""
+
+#: front-page.php
+msgid "همراه انتخاب شما"
 msgstr ""
 
 #: footer.php
 msgid "همراه خرید شما"
 msgstr ""
 
-#: front-page.php
-msgid "همراه شما"
+#: footer.php header.php inc/customizer.php
+msgid "همراه شما، از انتخاب تا خرید"
+msgstr ""
+
+#: front-page.php inc/customizer.php
+msgid "همراه کوچک، تجربه بزرگ."
 msgstr ""
 
 #: footer.php
+msgid "همراه‌های خوب،"
+msgstr ""
+
+#: front-page.php inc/customizer.php
+msgid "همراه‌های خوش‌ساخت برای کار، موسیقی و لحظه‌های خودت. انتخاب بعدی‌ات از اینجا شروع می‌شود."
+msgstr ""
+
+#: footer.php header.php inc/woocommerce.php
 msgid "همه محصولات"
 msgstr ""
 
-#: header.php inc/customizer.php
-msgid "پاسخ‌گوی انتخاب شما هستیم"
-msgstr ""
-
 #: front-page.php
-msgid "پیش از خرید مطالعه کنید"
-msgstr ""
-
-#: front-page.php
-msgid "پیشنهادهای دوست‌داشتنی"
+msgid "همه نوشته‌ها"
 msgstr ""
 
 #: inc/template-tags.php
 msgid "پیشنهادهای ویژه"
 msgstr ""
 
+#: inc/woocommerce.php
+msgid "پیش‌نمایش سریع: %s"
+msgstr ""
+
+#: inc/woocommerce.php
+msgid "پیگیری از حساب کاربری"
+msgstr ""
+
 #: index.php
 msgid "چیزی پیدا نشد"
 msgstr ""
 
-#: front-page.php inc/customizer.php
-msgid "کالکشن تازه نویدشاپ"
-msgstr ""
-
-#: front-page.php
-msgid "کشف تازه‌ها"
-msgstr ""
-
-#: front-page.php inc/customizer.php
-msgid "کشف محصولات"
+#: header.php
+msgid "کشف فروشگاه"
 msgstr ""
 
 #: front-page.php
@@ -301,22 +489,30 @@ msgid "کشف محصولات فروشگاه"
 msgstr ""
 
 #: front-page.php
+msgid "کشف همراه‌های کار"
+msgstr ""
+
+#: front-page.php
+msgid "کشف کالکشن"
+msgstr ""
+
+#: front-page.php
+msgid "کمی بیشتر بدانیم"
+msgstr ""
+
+#: inc/template-tags.php
 msgid "گشتی در فروشگاه"
 msgstr ""
 
 #: footer.php
-msgid "گشت‌وگذار"
+msgid "گشت‌وگذار در نوید"
 msgstr ""
 
 #: comments.php
 msgid "گفت‌وگو"
 msgstr ""
 
-#: header.php inc/customizer.php
-msgid "یک انتخاب تازه، برای سبک زندگی امروز"
-msgstr ""
-
-#: front-page.php
-msgid "یک قدم هوشمندتر."
+#: front-page.php inc/customizer.php
+msgid "یک قدم هوشمندتر در ریتم زندگی."
 msgstr ""
 
