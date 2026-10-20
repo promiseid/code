@@ -2,6 +2,7 @@
 /** Editorial storefront. @package NavidCommerce */
 defined( 'ABSPATH' ) || exit;
 get_header();
+if ( 'studio' !== get_theme_mod( 'navid_home_layout', 'market' ) ) { require get_template_directory() . '/inc/market-home.php'; get_footer(); return; }
 $shop_url = navid_commerce_shop_url();
 ?>
 <main id="main-content">

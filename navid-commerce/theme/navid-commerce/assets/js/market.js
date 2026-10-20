@@ -1,0 +1,9 @@
+document.querySelectorAll('.nc-market-hero').forEach(hero=>{
+ const slides=[...hero.querySelectorAll('.nc-market-slide')],dots=[...hero.querySelectorAll('[data-slide-index]')],pause=hero.querySelector('[data-slide-pause]'),status=hero.querySelector('.nc-slider-status'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ let current=0,timer,playing=hero.dataset.auto==='1'&&!reduced.matches,hovered=false;hero.querySelector('.nc-slider-controls').hidden=false;
+ function schedule(){clearTimeout(timer);if(playing&&!hovered&&!document.hidden&&!hero.contains(document.activeElement))timer=setTimeout(()=>show(current+1,false),6500);}
+ function updatePause(){pause.setAttribute('aria-pressed',String(!playing));pause.setAttribute('aria-label',playing?'توقف پخش خودکار':'شروع پخش خودکار');pause.textContent=playing?'Ⅱ':'▷';}
+ function show(index,announce=true){current=(index+slides.length)%slides.length;slides.forEach((s,i)=>s.hidden=i!==current);dots.forEach((d,i)=>d.setAttribute('aria-pressed',String(i===current)));hero.querySelector('.nc-slider-number').textContent=String(current+1).padStart(2,'0')+' / 03';if(announce)status.textContent='اسلاید '+(current+1)+' از '+slides.length;schedule();}
+ hero.querySelector('[data-slide-prev]').addEventListener('click',()=>show(current-1));hero.querySelector('[data-slide-next]').addEventListener('click',()=>show(current+1));dots.forEach(d=>d.addEventListener('click',()=>show(Number(d.dataset.slideIndex))));pause.addEventListener('click',()=>{playing=!playing;updatePause();schedule();});
+ hero.addEventListener('mouseenter',()=>{hovered=true;schedule();});hero.addEventListener('mouseleave',()=>{hovered=false;schedule();});hero.addEventListener('focusin',schedule);hero.addEventListener('focusout',()=>queueMicrotask(schedule));document.addEventListener('visibilitychange',schedule);reduced.addEventListener('change',()=>{if(reduced.matches){playing=false;updatePause();schedule();}});updatePause();schedule();
+});

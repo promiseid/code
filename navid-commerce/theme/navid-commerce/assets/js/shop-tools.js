@@ -68,7 +68,7 @@
    const rows=await fetchProducts({include:requested.join(','),per_page:20,catalog_visibility:'visible',_fields:'id,name,permalink,images,prices,is_in_stock,categories,attributes'},controller.signal);
    if(!dialog.open||selected!==active||controller.signal.aborted)return;
    const available=new Set();rows.forEach(p=>{const fresh=normalize(p);const prev=products.get(p.id);products.set(p.id,{...prev,...fresh,description:prev?.description||''});available.add(p.id);});
-   requested.filter(id=>!available.has(id)).forEach(id=>products.delete(id));render();status.textContent=rows.length===requested.length?'قیمت و موجودی به‌روز شد.':'برخی محصولات دیگر در فهرست عمومی فروشگاه در دسترس نیستند.';
+   const missing=requested.filter(id=>!available.has(id));if(missing.length){missing.forEach(id=>products.delete(id));for(const key of Object.keys(state)){state[key]=state[key].filter(id=>!missing.includes(id));persist(key);}refresh();}render();status.textContent=missing.length?'محصولات خارج‌شده از فهرست عمومی، از فهرست شما حذف شدند.':'قیمت و موجودی به‌روز شد.';
   }catch {if(dialog.open&&selected===active&&controller===requestController){status.textContent='دریافت اطلاعات تازه ممکن نشد. قیمت نهایی را در صفحه محصول بررسی کنید.';render();}}
   finally{clearTimeout(timeout);}
  };
@@ -84,7 +84,7 @@
  dialog.querySelector('.nc-tools-close').addEventListener('click',()=>dialog.close());
  dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
  dialog.addEventListener('close',()=>{requestController?.abort();document.documentElement.classList.remove('nc-dialog-open');returnFocus?.focus();});
- window.addEventListener('storage',event=>{const key=event.key?.replace('navid-','');if(Object.hasOwn(state,key)){try{state[key]=validIds(JSON.parse(event.newValue||'[]')).slice(0,key==='compare'?4:20);refresh();if(dialog.open)render();}catch{}}});
+ window.addEventListener('storage',event=>{const key=event.key?.replace('navid-','');if(Object.hasOwn(state,key)){try{state[key]=validIds(JSON.parse(event.newValue||'[]')).slice(0,key==='compare'?4:key==='recent'?8:20);refresh();if(dialog.open)render();}catch{}}});
  // Native search submission stays available. Suggestions are an enhancement with Escape/Tab support.
  document.querySelectorAll('.header-search .search-form').forEach(form=>{
   const input=form.querySelector('input[type=search]');if(!input)return;const panel=el('div','nc-search-results');panel.id=input.id+'-suggestions';panel.hidden=true;panel.setAttribute('aria-label','پیشنهادهای جستجو');const feedback=el('p','nc-search-feedback');feedback.setAttribute('role','status');panel.append(feedback);form.parentElement.append(panel);input.setAttribute('aria-controls',panel.id);input.autocomplete='off';let timer,controller;

@@ -4,6 +4,8 @@ defined( 'ABSPATH' ) || exit;
 
 function navid_commerce_customize( $customizer ) {
 	$customizer->add_section( 'navid_store', array( 'title' => __( 'تنظیمات نویدشاپ', 'navid-commerce' ), 'priority' => 30 ) );
+	$customizer->add_setting( 'navid_home_layout', array( 'default' => 'market', 'sanitize_callback' => function( $v ) { return 'studio' === $v ? 'studio' : 'market'; } ) );
+	$customizer->add_control( 'navid_home_layout', array( 'label' => 'چیدمان فروشگاه', 'section' => 'navid_store', 'type' => 'select', 'choices' => array( 'market' => 'بازارگاهی', 'studio' => 'استودیو سه‌بعدی' ) ) );
 	$fields = array(
 		'navid_announcement' => array( __( 'نوار اطلاع‌رسانی', 'navid-commerce' ), __( 'انتخاب‌های تازه برای زندگی امروز', 'navid-commerce' ) ),
 		'navid_hero_label' => array( __( 'برچسب بالای بنر', 'navid-commerce' ), 'THE NEXT EVERYDAY / NAVID' ),
@@ -18,7 +20,7 @@ function navid_commerce_customize( $customizer ) {
 		$customizer->add_setting( $key, array( 'default' => $field[1], 'sanitize_callback' => 'sanitize_text_field' ) );
 		$customizer->add_control( $key, array( 'label' => $field[0], 'section' => 'navid_store', 'type' => 'text' ) );
 	}
-	$customizer->add_setting( 'navid_accent', array( 'default' => '#087f76', 'sanitize_callback' => 'sanitize_hex_color' ) );
+	$customizer->add_setting( 'navid_accent', array( 'default' => '#d92846', 'sanitize_callback' => 'sanitize_hex_color' ) );
 	$customizer->add_control( new WP_Customize_Color_Control( $customizer, 'navid_accent', array( 'label' => __( 'رنگ اصلی برند', 'navid-commerce' ), 'section' => 'navid_store' ) ) );
 	$customizer->add_setting( 'navid_hero_image', array( 'default' => 0, 'sanitize_callback' => 'absint' ) );
 	$customizer->add_control( new WP_Customize_Media_Control( $customizer, 'navid_hero_image', array( 'label' => __( 'تصویر بنر اصلی', 'navid-commerce' ), 'mime_type' => 'image', 'section' => 'navid_store' ) ) );
