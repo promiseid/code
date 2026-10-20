@@ -2,8 +2,8 @@
 
 این پیش‌نمایش، وردپرس و ووکامرس واقعی را در مرورگر با WordPress Playground اجرا می‌کند. هر بازدیدکننده محیط جداگانه‌ای دارد. این یک فروشگاه میزبانی‌شده با پایگاه‌داده مشترک نیست.
 
-- [مشاهده فروشگاه](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/playground/blueprint-0.2.0.json)
-- [باز کردن پیشخوان](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/playground/admin-0.2.0.json)
+- [مشاهده فروشگاه](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/playground/blueprint-0.3.0.json)
+- [باز کردن پیشخوان](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/playground/admin-0.3.0.json)
 - نام کاربری مدیر: `admin`
 - رمز نمونه: `NavidDemo!2026`
 
@@ -13,4 +13,6 @@
 
 رمز بالا فقط مربوط به دموی جداگانه در مرورگر است و در فایل نصب قالب وجود ندارد. آن را برای سایت واقعی استفاده نکنید. محصولات و قیمت‌ها فرضی و بر حسب ریال‌اند. روش پرداخت آزمایشی در محل فعال است و وجهی دریافت نمی‌شود. ارسال ایمیل واقعی غیرفعال است.
 
-نسخه‌ها: WordPress 7.1.3، WooCommerce 11.2.1، PHP 8.3 و Navid Commerce 0.2.0. سرعت بارگیری اولیه Playground معیار سرعت قالب روی هاست واقعی نیست.
+نسخه‌ها: WordPress 7.1.3، WooCommerce 11.2.1، PHP 8.3 و Navid Commerce 0.3.0. سرعت بارگیری اولیه Playground معیار سرعت قالب روی هاست واقعی نیست.
+
+در نسخه ۰٫۳٫۰ مدل سه‌بعدی روی دسکتاپ خودکار و در موبایل با دکمه «نمای سه‌بعدی» فعال می‌شود. در حالت کاهش حرکت، تصویر ثابت نمایش داده می‌شود و فعال‌سازی دستی ممکن است. برای دیدن نسخه تازه از پیوند نسخه‌دار ۰٫۳٫۰ استفاده کنید؛ محیط ذخیره‌شده قدیمی لزوماً با سورس تازه جایگزین نمی‌شود.

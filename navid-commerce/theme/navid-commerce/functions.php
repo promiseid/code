@@ -2,10 +2,11 @@
 /** Theme bootstrap. @package NavidCommerce */
 defined( 'ABSPATH' ) || exit;
 
-define( 'NAVID_COMMERCE_VERSION', '0.2.0' );
+define( 'NAVID_COMMERCE_VERSION', '0.3.0' );
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/woocommerce.php';
+require get_template_directory() . '/inc/shop-tools.php';
 
 function navid_commerce_setup() {
 	load_theme_textdomain( 'navid-commerce', get_template_directory() . '/languages' );
@@ -38,6 +39,12 @@ function navid_commerce_assets() {
 		wp_enqueue_style( 'navid-commerce-shop', get_theme_file_uri( $shop_style ), array( 'navid-commerce' ), NAVID_COMMERCE_VERSION );
 	}
 	wp_enqueue_script( 'navid-commerce', get_theme_file_uri( '/assets/js/main.js' ), class_exists( 'WooCommerce' ) ? array( 'jquery' ) : array(), NAVID_COMMERCE_VERSION, array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_style( 'navid-commerce-studio', get_theme_file_uri( '/assets/css/studio.css' ), array( 'navid-commerce' ), NAVID_COMMERCE_VERSION );
+	wp_enqueue_script( 'navid-commerce-motion', get_theme_file_uri( '/assets/js/motion.js' ), array(), NAVID_COMMERCE_VERSION, array( 'strategy' => 'defer', 'in_footer' => true ) );
+	if ( class_exists( 'WooCommerce' ) ) {
+		wp_enqueue_script( 'navid-commerce-tools', get_theme_file_uri( '/assets/js/shop-tools.js' ), array( 'navid-commerce' ), NAVID_COMMERCE_VERSION, array( 'strategy' => 'defer', 'in_footer' => true ) );
+		wp_add_inline_script( 'navid-commerce-tools', 'window.navidStore=' . wp_json_encode( array( 'api' => esc_url_raw( rest_url( 'wc/store/v1/products' ) ), 'placeholder' => wc_placeholder_img_src() ), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT ) . ';', 'before' );
+	}
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

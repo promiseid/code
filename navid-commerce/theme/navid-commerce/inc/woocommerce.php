@@ -25,9 +25,10 @@ add_action( 'after_setup_theme', 'navid_commerce_woo_hooks', 20 );
 
 function navid_commerce_woo_start() {
 	echo '<main id="main-content" class="container shop-main"><div class="shop-layout">';
-	if ( ! is_product() && is_active_sidebar( 'shop-sidebar' ) ) {
+	if ( ! is_product() ) {
 		echo '<aside class="shop-filters" aria-label="' . esc_attr__( 'فیلترهای محصولات', 'navid-commerce' ) . '">';
-		dynamic_sidebar( 'shop-sidebar' );
+		navid_commerce_catalog_filters();
+		if ( is_active_sidebar( 'shop-sidebar' ) ) { dynamic_sidebar( 'shop-sidebar' ); }
 		echo '</aside>';
 	}
 	echo '<div class="shop-content">';
@@ -46,13 +47,8 @@ function navid_commerce_card_category() {
 function navid_commerce_quickview_button() {
 	global $product;
 	if ( ! $product instanceof WC_Product || ! get_theme_mod( 'navid_enable_quickview', true ) ) { return; }
-	$price = $product->is_type( 'variable' ) ? $product->get_variation_price( 'min' ) : $product->get_price();
-	$regular = $product->is_type( 'variable' ) ? '' : $product->get_regular_price();
-	$plain_price = static function ( $amount ) use ( $product ) {
-		return '' === $amount ? '' : html_entity_decode( wp_strip_all_tags( wc_price( wc_get_price_to_display( $product, array( 'price' => (float) $amount ) ) ) ), ENT_QUOTES, 'UTF-8' );
-	};
-	$image = wp_get_attachment_image_url( $product->get_image_id(), 'woocommerce_single' );
-	$data = array( 'name' => $product->get_name(), 'url' => esc_url_raw( $product->get_permalink() ), 'image' => esc_url_raw( $image ? $image : wc_placeholder_img_src() ), 'price' => ( $product->is_type( 'variable' ) ? __( 'از ', 'navid-commerce' ) : '' ) . $plain_price( $price ), 'regular' => $product->is_on_sale() ? $plain_price( $regular ) : '', 'description' => wp_trim_words( wp_strip_all_tags( $product->get_short_description() ), 45, '…' ), 'stock' => $product->is_in_stock() ? __( 'موجود و قابل سفارش', 'navid-commerce' ) : __( 'در حال حاضر ناموجود', 'navid-commerce' ), 'inStock' => $product->is_in_stock() );
+	$data = navid_commerce_public_product( $product );
+
 	echo '<button type="button" class="nc-quickview" aria-haspopup="dialog" aria-controls="nc-product-preview" aria-label="' . esc_attr( sprintf( __( 'پیش‌نمایش سریع: %s', 'navid-commerce' ), $product->get_name() ) ) . '" data-product-preview="' . esc_attr( wp_json_encode( $data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) ) . '">';
 	navid_commerce_icon( 'eye' );
 	echo '</button>';

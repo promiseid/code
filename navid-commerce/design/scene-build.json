@@ -1,0 +1,17 @@
+{
+  "engine": "Three.js",
+  "version": "0.186.1",
+  "source": "design/product-scene.source.js",
+  "license": "MIT",
+  "upstream": "https://github.com/mrdoob/three.js",
+  "registryTarball": "https://registry.npmjs.org/three/-/three-0.186.1.tgz",
+  "registryIntegrity": "sha512-blFeqb49wRCSGUGj7gtpfnSGHy2lwDk94RhUmS1c/hTby70kvChbWpkJ4Pm1390LqzzvTmzgXKHPEafJwCb8jA==",
+  "bundle": "theme/navid-commerce/assets/js/product-scene.js",
+  "bundleSha256": "69b9c71b08b7bcf78c82521197597c139609ea861cb3222c1065ca60180c2c13",
+  "bytes": 575523,
+  "gzipBytes": 146511,
+  "loading": "home desktop after load/idle and when visible; manual on <=800px, reduced motion or Data Saver; no runtime CDN",
+  "build": "npm install --no-save three@0.186.1 esbuild@0.28.2 && npx esbuild design/product-scene.source.js --bundle --minify --format=esm --target=es2022 --outfile=theme/navid-commerce/assets/js/product-scene.js --legal-comments=eof",
+  "bundlerVersion": "0.28.2",
+  "licenseFile": "theme/navid-commerce/assets/licenses/three-LICENSE.txt"
+}

@@ -26,6 +26,12 @@ function navid_commerce_icon( $name, $class = '' ) {
 		'spark' => '<path d="m12 2 2.7 7.3L22 12l-7.3 2.7L12 22l-2.7-7.3L2 12l7.3-2.7L12 2Z"/>',
 		'check' => '<path d="m5 12 4 4L19 6"/>',
 		'home' => '<path d="m3 10 9-7 9 7v11h-7v-7h-4v7H3V10Z"/>',
+		'heart' => '<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>',
+		'compare' => '<path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/>',
+		'cube' => '<path d="m12 2 9 5v10l-9 5-9-5V7l9-5Zm0 10 9-5M12 12 3 7m9 5v10M7.5 4.5l9 5"/>',
+		'pause' => '<path d="M8 5v14M16 5v14"/>',
+		'play' => '<path d="m8 4 12 8-12 8V4Z"/>',
+		'filter' => '<path d="M3 6h18M6 12h12M9 18h6"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/>',
 	);
 	if ( ! isset( $paths[ $name ] ) ) {
 		return;

@@ -1,0 +1,52 @@
+{
+  "360": {
+    "status": 200,
+    "overflow": false,
+    "scene": "three-webgl",
+    "sceneStatus": "مدل مفهومی نمایشی؛ رنگ انتخابی روی سفارش اثر ندارد.",
+    "fonts": true,
+    "badImages": [],
+    "products": 8,
+    "errors": []
+  },
+  "390": {
+    "status": 200,
+    "overflow": false,
+    "scene": "three-webgl",
+    "sceneStatus": "مدل مفهومی نمایشی؛ رنگ انتخابی روی سفارش اثر ندارد.",
+    "fonts": true,
+    "badImages": [],
+    "products": 8,
+    "errors": []
+  },
+  "768": {
+    "status": 200,
+    "overflow": false,
+    "scene": "three-webgl",
+    "sceneStatus": "مدل مفهومی نمایشی؛ رنگ انتخابی روی سفارش اثر ندارد.",
+    "fonts": true,
+    "badImages": [],
+    "products": 8,
+    "errors": []
+  },
+  "1200": {
+    "status": 200,
+    "overflow": false,
+    "scene": "three-webgl",
+    "sceneStatus": "مدل مفهومی نمایشی؛ رنگ انتخابی روی سفارش اثر ندارد.",
+    "fonts": true,
+    "badImages": [],
+    "products": 8,
+    "errors": []
+  },
+  "1440": {
+    "status": 200,
+    "overflow": false,
+    "scene": "three-webgl",
+    "sceneStatus": "مدل مفهومی نمایشی؛ رنگ انتخابی روی سفارش اثر ندارد.",
+    "fonts": true,
+    "badImages": [],
+    "products": 8,
+    "errors": []
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "نویدشاپ — Navid Studio 0.3.0",
+    "author": "promiseid",
+    "description": "Persian WooCommerce with a local interactive 3D model, animated visuals, wishlist, comparison, live search and real catalog filters. Browser-local WordPress preview."
+  },
+  "landingPage": "/",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "7.1.3"
+  },
+  "features": {
+    "networking": true
+  },
+  "constants": {
+    "DISABLE_WP_CRON": true,
+    "WP_DEBUG": false
+  },
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/woocommerce.11.2.1.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/navid-commerce-0.3.0.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/promiseid/code/main/navid-commerce/navid-commerce-demo-0.3.0.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "unzip",
+      "zipFile": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/translation/core/7.1.3/fa_IR.zip"
+      },
+      "extractToPath": "/wordpress/wp-content/languages"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/languages/plugins"
+    },
+    {
+      "step": "unzip",
+      "zipFile": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/11.2.1/fa_IR.zip"
+      },
+      "extractToPath": "/wordpress/wp-content/languages/plugins"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\n/** Review fixture for an isolated WordPress Playground, never a live store. */\nrequire '/wordpress/wp-load.php';\nwp_set_current_user( 1 );\nwp_set_password( 'NavidDemo!2026', 1 );\nupdate_option( 'blogname', 'نویدشاپ' );\nupdate_option( 'blogdescription', 'تکنولوژی خوب، حال خوب. انتخاب‌های تازه برای زندگی امروز.' );\nupdate_option( 'blog_public', 0 );\nupdate_option( 'WPLANG', 'fa_IR' );\nupdate_option( 'timezone_string', 'Asia/Tehran' );\nupdate_option( 'woocommerce_currency', 'IRR' );\nupdate_option( 'woocommerce_price_num_decimals', 0 );\nupdate_option( 'woocommerce_default_country', 'IR:THR' );\nupdate_option( 'woocommerce_store_city', 'تهران' );\nupdate_option( 'woocommerce_store_postcode', '1111111111' );\nupdate_option( 'woocommerce_store_address', 'فروشگاه آزمایشی' );\nupdate_option( 'woocommerce_calc_taxes', 'no' );\nupdate_option( 'woocommerce_enable_guest_checkout', 'yes' );\nupdate_option( 'woocommerce_enable_signup_and_login_from_checkout', 'yes' );\nupdate_option( 'woocommerce_enable_myaccount_registration', 'yes' );\nupdate_option( 'woocommerce_cod_settings', array( 'enabled' => 'yes', 'title' => 'پرداخت آزمایشی در محل', 'description' => 'فقط برای آزمون؛ پول واقعی دریافت نمی‌شود.' ) );\nupdate_option( 'woocommerce_ship_to_countries', 'disabled' );\nupdate_option( 'woocommerce_onboarding_profile', array( 'completed' => true ) );\nupdate_option( 'woocommerce_task_list_hidden', 'yes' );\nupdate_option( 'woocommerce_coming_soon', 'no' );\nupdate_option( 'woocommerce_allow_tracking', 'no' );\nif ( function_exists( 'wc_create_pages' ) ) {\n    wc_create_pages();\n}\n$result = navid_demo_seed( true );\nforeach ( array( 'cart' => '[woocommerce_cart]', 'checkout' => '[woocommerce_checkout]', 'myaccount' => '[woocommerce_my_account]' ) as $kind => $content ) {\n    $id = wc_get_page_id( $kind );\n    if ( $id > 0 ) {\n        wp_update_post( array( 'ID' => $id, 'post_content' => $content ) );\n    }\n}\nwp_mkdir_p( WPMU_PLUGIN_DIR );\nfile_put_contents( WPMU_PLUGIN_DIR . '/navid-playground.php', \"<?php\\n/** Isolated preview: do not send real emails. */\\nadd_filter( 'pre_wp_mail', '__return_true' );\\n\" );\nwp_set_current_user( 0 );\necho wp_json_encode( array( 'theme' => get_stylesheet(), 'products' => count( wc_get_products( array( 'limit' => -1, 'return' => 'ids' ) ) ), 'demo' => $result ), JSON_UNESCAPED_UNICODE );\n"
+    },
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "NavidDemo!2026"
+    }
+  ]
+}

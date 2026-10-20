@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-19T15:03:50.806Z",
+  "date": "2026-10-20T06:54:40.765Z",
   "environment": "Local WordPress Playground / PHP WebAssembly, no page cache; not production hosting.",
   "formFactor": "mobile",
   "throttling": {
@@ -11,39 +11,39 @@
     "cpuSlowdownMultiplier": 4
   },
   "scores": {
-    "performance": 87,
+    "performance": 79,
     "accessibility": 100,
     "best-practices": 100,
-    "seo": 85
+    "seo": 77
   },
   "metrics": {
     "first-contentful-paint": {
-      "value": 1662.52,
-      "display": "1.7 s"
+      "value": 1969.0720000000001,
+      "display": "2.0 s"
     },
     "largest-contentful-paint": {
-      "value": 3850.0399999999995,
-      "display": "3.9 s"
+      "value": 4139.144,
+      "display": "4.1 s"
     },
     "speed-index": {
-      "value": 3509.3656448305874,
-      "display": "3.5 s"
+      "value": 6743.131633838351,
+      "display": "6.7 s"
     },
     "total-blocking-time": {
-      "value": 0,
-      "display": "0 ms"
+      "value": 53.5,
+      "display": "50 ms"
     },
     "cumulative-layout-shift": {
       "value": 0,
       "display": "0"
     },
     "server-response-time": {
-      "value": 1746,
-      "display": "Root document took 1,750 ms"
+      "value": 3822,
+      "display": "Root document took 3,820 ms"
     },
     "total-byte-weight": {
-      "value": 480866,
-      "display": "Total size was 470 KiB"
+      "value": 520878,
+      "display": "Total size was 509 KiB"
     }
   },
   "warnings": []

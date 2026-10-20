@@ -11,6 +11,8 @@
     "theme/navid-commerce/functions.php": "PASS",
     "theme/navid-commerce/header.php": "PASS",
     "theme/navid-commerce/inc/customizer.php": "PASS",
+    "theme/navid-commerce/inc/hero-studio.php": "PASS",
+    "theme/navid-commerce/inc/shop-tools.php": "PASS",
     "theme/navid-commerce/inc/template-tags.php": "PASS",
     "theme/navid-commerce/inc/woocommerce.php": "PASS",
     "theme/navid-commerce/index.php": "PASS",

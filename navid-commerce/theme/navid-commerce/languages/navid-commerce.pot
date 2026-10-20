@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Navid Commerce 0.2.0\n"
+"Project-Id-Version: Navid Commerce 0.3.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "MIME-Version: 1.0\n"
 
@@ -16,7 +16,7 @@ msgstr ""
 msgid "ارسال سفارش"
 msgstr ""
 
-#: inc/woocommerce.php
+#: inc/shop-tools.php
 msgid "از "
 msgstr ""
 
@@ -28,16 +28,32 @@ msgstr ""
 msgid "از علاقه‌ات شروع کن"
 msgstr ""
 
+#: inc/shop-tools.php
+msgid "از قیمت"
+msgstr ""
+
+#: inc/hero-studio.php
+msgid "از هر زاویه، یک تجربه تازه"
+msgstr ""
+
 #: inc/customizer.php
 msgid "اسکریپت‌های استاندارد صفحه نخست در پایین صفحه قرار می‌گیرند. اگر افزونه‌ای به اجرای زودهنگام اسکریپت وابسته است، می‌توانید این گزینه را خاموش کنید."
 msgstr ""
 
-#: footer.php
-msgid "انتخاب آگاهانه از همین‌جا شروع می‌شود. جزئیات محصولات را ببینید و همراه مناسب خود را پیدا کنید."
+#: inc/shop-tools.php
+msgid "اعمال فیلترها"
 msgstr ""
 
-#: front-page.php inc/customizer.php
-msgid "انتخاب بعدی من"
+#: inc/shop-tools.php
+msgid "افزودن به علاقه‌مندی‌ها: %s"
+msgstr ""
+
+#: inc/shop-tools.php
+msgid "افزودن به مقایسه: %s"
+msgstr ""
+
+#: footer.php
+msgid "انتخاب آگاهانه از همین‌جا شروع می‌شود. جزئیات محصولات را ببینید و همراه مناسب خود را پیدا کنید."
 msgstr ""
 
 #: front-page.php
@@ -56,12 +72,24 @@ msgstr ""
 msgid "انتخاب خودکار"
 msgstr ""
 
+#: inc/shop-tools.php
+msgid "انتخاب و خرید"
+msgstr ""
+
 #: inc/woocommerce.php
 msgid "انتخاب ویژگی‌ها و افزودن به سبد در صفحه محصول"
 msgstr ""
 
+#: inc/hero-studio.php
+msgid "انتخابی هم‌فرکانس تو"
+msgstr ""
+
 #: header.php inc/customizer.php
 msgid "انتخاب‌های تازه برای زندگی امروز"
+msgstr ""
+
+#: inc/shop-tools.php
+msgid "انتخاب‌های شما"
 msgstr ""
 
 #: front-page.php
@@ -80,6 +108,10 @@ msgstr ""
 msgid "بارگذاری سبک صفحه نخست"
 msgstr ""
 
+#: inc/shop-tools.php
+msgid "بازه قیمت (%s)"
+msgstr ""
+
 #: footer.php
 msgid "بازگشت به بالا"
 msgstr ""
@@ -96,10 +128,6 @@ msgstr ""
 msgid "برای روزهای بهتر."
 msgstr ""
 
-#: front-page.php inc/customizer.php
-msgid "برای سلیقه‌ای که فرق دارد"
-msgstr ""
-
 #: front-page.php
 msgid "برای نمایش محصولات، ووکامرس را نصب و فعال کنید. این پیام فقط برای مدیر نمایش داده می‌شود."
 msgstr ""
@@ -112,16 +140,20 @@ msgstr ""
 msgid "برچسب بالای بنر"
 msgstr ""
 
+#: inc/shop-tools.php
+msgid "بستن انتخاب‌ها"
+msgstr ""
+
 #: inc/woocommerce.php
 msgid "بستن پیش‌نمایش"
 msgstr ""
 
-#: front-page.php
-msgid "به سبک خودت."
-msgstr ""
-
 #: footer.php
 msgid "بیشتر درباره فروشگاه"
+msgstr ""
+
+#: inc/shop-tools.php
+msgid "تا قیمت"
 msgstr ""
 
 #: front-page.php
@@ -144,6 +176,10 @@ msgstr ""
 msgid "تصویر بنر کناری"
 msgstr ""
 
+#: inc/hero-studio.php
+msgid "تصویر مفهومی هدفون با بدنه تیره و نور سبز"
+msgstr ""
+
 #: inc/customizer.php
 msgid "تنظیمات نویدشاپ"
 msgstr ""
@@ -156,8 +192,12 @@ msgstr ""
 msgid "توضیح بنر کناری"
 msgstr ""
 
-#: front-page.php inc/customizer.php
-msgid "تکنولوژی، به سبک تو."
+#: inc/hero-studio.php
+msgid "توقف حرکت"
+msgstr ""
+
+#: inc/hero-studio.php
+msgid "تکنولوژی، با امضای سلیقه تو"
 msgstr ""
 
 #: inc/woocommerce.php
@@ -166,6 +206,10 @@ msgstr ""
 
 #: front-page.php
 msgid "جزئیات کوچک."
+msgstr ""
+
+#: inc/hero-studio.php
+msgid "جزئیات، از نزدیک"
 msgstr ""
 
 #: searchform.php
@@ -216,8 +260,12 @@ msgstr ""
 msgid "خوش آمدید حساب کاربری"
 msgstr ""
 
-#: inc/woocommerce.php
+#: inc/shop-tools.php
 msgid "در حال حاضر ناموجود"
+msgstr ""
+
+#: inc/shop-tools.php
+msgid "دسترسی سریع به خرید محصول"
 msgstr ""
 
 #: footer.php
@@ -226,6 +274,10 @@ msgstr ""
 
 #: inc/customizer.php
 msgid "دسته مقصد بنر کناری"
+msgstr ""
+
+#: inc/shop-tools.php
+msgid "دسته‌بندی"
 msgstr ""
 
 #: header.php
@@ -260,6 +312,10 @@ msgstr ""
 msgid "رنگ اصلی برند"
 msgstr ""
 
+#: inc/hero-studio.php
+msgid "رنگ مدل نمایشی"
+msgstr ""
+
 #: inc/woocommerce.php
 msgid "روش ارسال در تسویه‌حساب"
 msgstr ""
@@ -284,12 +340,20 @@ msgstr ""
 msgid "شفاف، پیش از خرید"
 msgstr ""
 
-#: front-page.php
-msgid "طراحی خوب. انتخاب بهتر."
+#: inc/customizer.php
+msgid "صحنه سه‌بعدی تعاملی صفحه نخست"
 msgstr ""
 
-#: front-page.php
-msgid "طراحی مفهومی هدفون با بدنه فلزی و بالشتک پارچه‌ای"
+#: inc/customizer.php inc/hero-studio.php
+msgid "صدا را احساس کن. جزئیات را کشف کن. همراه بعدی زندگی‌ات را از زاویه‌ای تازه ببین."
+msgstr ""
+
+#: inc/customizer.php
+msgid "علاقه‌مندی، مقایسه و جستجوی زنده"
+msgstr ""
+
+#: header.php
+msgid "علاقه‌مندی‌ها"
 msgstr ""
 
 #: inc/customizer.php
@@ -298,6 +362,10 @@ msgstr ""
 
 #: inc/customizer.php
 msgid "عنوان بنر کناری"
+msgstr ""
+
+#: inc/customizer.php inc/hero-studio.php
+msgid "فراتر از یک انتخاب"
 msgstr ""
 
 #: inc/template-tags.php
@@ -312,12 +380,16 @@ msgstr ""
 msgid "فروشگاهت را آماده کن"
 msgstr ""
 
-#: front-page.php
-msgid "فضای کارت،"
-msgstr ""
-
 #: inc/customizer.php
 msgid "فعال بودن پیش‌نمایش سریع محصول"
+msgstr ""
+
+#: inc/shop-tools.php
+msgid "فقط تخفیف‌دارها"
+msgstr ""
+
+#: inc/shop-tools.php
+msgid "فقط کالاهای موجود"
 msgstr ""
 
 #: functions.php header.php
@@ -330,6 +402,14 @@ msgstr ""
 
 #: functions.php
 msgid "فهرست پایین صفحه"
+msgstr ""
+
+#: inc/shop-tools.php
+msgid "فهرست‌ها در همین مرورگر ذخیره می‌شوند. قیمت و موجودی هنگام باز کردن فهرست تازه‌سازی می‌شود."
+msgstr ""
+
+#: inc/shop-tools.php
+msgid "فیلتر محصولات"
 msgstr ""
 
 #: functions.php
@@ -360,8 +440,32 @@ msgstr ""
 msgid "مجله نوید"
 msgstr ""
 
+#: footer.php
+msgid "محصولات اخیراً دیده‌شده"
+msgstr ""
+
 #: inc/template-tags.php
 msgid "محصولات تخفیف‌دار فروشگاه، یک‌جا برای شما."
+msgstr ""
+
+#: inc/hero-studio.php
+msgid "مدل سه‌بعدی مفهومی هدفون. برای چرخاندن، بکشید یا کلیدهای پیکان چپ و راست را بزنید."
+msgstr ""
+
+#: inc/hero-studio.php
+msgid "مدل مفهومی نمایشی؛ رنگ انتخابی روی سفارش اثر ندارد."
+msgstr ""
+
+#: inc/hero-studio.php
+msgid "مدل نمایشی: سبز"
+msgstr ""
+
+#: inc/hero-studio.php
+msgid "مدل نمایشی: شامپاینی"
+msgstr ""
+
+#: inc/hero-studio.php
+msgid "مدل نمایشی: گرافیت"
 msgstr ""
 
 #: inc/woocommerce.php
@@ -388,11 +492,15 @@ msgstr ""
 msgid "مشخصات، قیمت و شرایط هر محصول را پیش از خرید در صفحه آن بررسی کنید."
 msgstr ""
 
+#: header.php
+msgid "مقایسه محصولات"
+msgstr ""
+
 #: front-page.php
 msgid "موج خودت بشنو."
 msgstr ""
 
-#: inc/woocommerce.php
+#: inc/shop-tools.php
 msgid "موجود و قابل سفارش"
 msgstr ""
 
@@ -402,6 +510,10 @@ msgstr ""
 
 #: index.php
 msgid "نتیجه جستجو: %s"
+msgstr ""
+
+#: inc/hero-studio.php
+msgid "نمای سه‌بعدی"
 msgstr ""
 
 #: inc/customizer.php
@@ -428,6 +540,10 @@ msgstr ""
 msgid "نوار اطلاع‌رسانی"
 msgstr ""
 
+#: inc/customizer.php
+msgid "نوار دسترسی سریع به خرید محصول"
+msgstr ""
+
 #: inc/woocommerce.php
 msgid "نگاهی نزدیک‌تر به انتخاب شما"
 msgstr ""
@@ -452,8 +568,8 @@ msgstr ""
 msgid "همراه‌های خوب،"
 msgstr ""
 
-#: front-page.php inc/customizer.php
-msgid "همراه‌های خوش‌ساخت برای کار، موسیقی و لحظه‌های خودت. انتخاب بعدی‌ات از اینجا شروع می‌شود."
+#: inc/shop-tools.php
+msgid "همه دسته‌ها"
 msgstr ""
 
 #: footer.php header.php inc/woocommerce.php
@@ -462,6 +578,14 @@ msgstr ""
 
 #: front-page.php
 msgid "همه نوشته‌ها"
+msgstr ""
+
+#: inc/customizer.php inc/hero-studio.php
+msgid "وارد دنیای نوید شو"
+msgstr ""
+
+#: inc/shop-tools.php
+msgid "پاک کردن فیلترها"
 msgstr ""
 
 #: inc/template-tags.php
@@ -488,8 +612,8 @@ msgstr ""
 msgid "کشف محصولات فروشگاه"
 msgstr ""
 
-#: front-page.php
-msgid "کشف همراه‌های کار"
+#: inc/hero-studio.php
+msgid "کشف پیشنهادها"
 msgstr ""
 
 #: front-page.php

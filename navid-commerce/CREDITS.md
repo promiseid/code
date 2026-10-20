@@ -9,3 +9,7 @@
 - No third-party commercial theme, premium plugin, stock photo, paid font or unlicensed brand asset is bundled.
 
 All product names, specifications and prices in the optional demo are fictional sample data.
+
+## Navid Studio 0.3.0
+
+`design/product-scene.source.js` و `assets/images/studio-headphones.svg` هندسه و تصویر برداری اختصاصی پروژه هستند؛ دارایی پوسته تجاری دیگری استفاده نشده است. ماژول `assets/js/product-scene.js` شامل Three.js 0.186.1 با مجوز MIT است؛ متن کامل در `theme/navid-commerce/assets/licenses/three-LICENSE.txt` آمده است. منبع کامل کتابخانه در بسته رسمی npm به همین نسخه منتشر شده است. محیط نورپردازی مدل با Canvas محلی تولید می‌شود و HDR، مدل یا تکسچر خارجی دریافت نمی‌شود. تصویر تولیدشده نسخه ۰٫۲٫۰ برای سابقه و سازگاری نگهداری شده، اما بنر جدید از آن استفاده نمی‌کند.

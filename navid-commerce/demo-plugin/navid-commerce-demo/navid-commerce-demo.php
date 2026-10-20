@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Navid Commerce Demo
  * Description: درون‌ریزی اختیاری محصولات و برگه‌های نمایشی نویدشاپ. پس از درون‌ریزی قابل غیرفعال‌سازی است.
- * Version: 0.2.0
+ * Version: 0.3.0
  * Requires at least: 6.6
  * Requires PHP: 8.3
  * Author: Navid Bazrkar

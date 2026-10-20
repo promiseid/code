@@ -1,0 +1,110 @@
+[
+  {
+    "name": "real local WebGL scene loads, changes color and rotates by keyboard",
+    "pass": true,
+    "detail": {
+      "engine": "Three.js/WebGL",
+      "colorAndRotationChangePixels": true
+    }
+  },
+  {
+    "name": "pause stops all looping CSS animations and persists across reload",
+    "pass": true,
+    "detail": {
+      "pausedAcrossReload": true
+    }
+  },
+  {
+    "name": "desktop homepage automated accessibility",
+    "pass": true,
+    "detail": {
+      "violations": 0
+    }
+  },
+  {
+    "name": "wishlist persists and refreshes public prices via Woo Store API",
+    "pass": true,
+    "detail": {
+      "persisted": true,
+      "publicApiRefreshed": true
+    }
+  },
+  {
+    "name": "comparison shows actual prices, categories and removal",
+    "pass": true,
+    "detail": {
+      "twoProductsCompared": true,
+      "removalWorks": true
+    }
+  },
+  {
+    "name": "live search returns real products and supports Escape",
+    "pass": true,
+    "detail": {
+      "realProductLink": true
+    }
+  },
+  {
+    "name": "native combined price, stock, sale and category filters change results",
+    "pass": true,
+    "detail": {
+      "all": 8,
+      "combined": 2,
+      "category": 1
+    }
+  },
+  {
+    "name": "product sticky purchase bar and recently viewed list work",
+    "pass": true,
+    "detail": {
+      "realPurchaseFormTarget": true,
+      "recentProduct": true
+    }
+  },
+  {
+    "name": "mobile homepage, wishlist and comparison fit viewport with no accessibility violations",
+    "pass": true,
+    "detail": {
+      "width": 390,
+      "violations": 0
+    }
+  },
+  {
+    "name": "reduced motion defaults to a static lightweight poster without 3D download",
+    "pass": true,
+    "detail": {
+      "threeDownloaded": false,
+      "posterVisible": true
+    }
+  },
+  {
+    "name": "saved list corruption and script-like strings stay inert",
+    "pass": true,
+    "detail": {
+      "corruptStorageHandled": true,
+      "unsafeSchemesBlocked": true
+    }
+  },
+  {
+    "name": "catalog mobile layout and accessibility",
+    "pass": true,
+    "detail": {
+      "violations": 0
+    }
+  },
+  {
+    "name": "WebGL unavailable keeps a usable poster and working store",
+    "pass": true,
+    "detail": {
+      "posterFallback": true,
+      "products": 8
+    }
+  },
+  {
+    "name": "no unhandled JavaScript errors in tested supported-browser flows",
+    "pass": true,
+    "detail": {
+      "errors": []
+    }
+  }
+]
