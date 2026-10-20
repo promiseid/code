@@ -36,5 +36,10 @@ foreach ( array( 'cart' => '[woocommerce_cart]', 'checkout' => '[woocommerce_che
 }
 wp_mkdir_p( WPMU_PLUGIN_DIR );
 file_put_contents( WPMU_PLUGIN_DIR . '/navid-playground.php', "<?php\n/** Isolated preview: do not send real emails. */\nadd_filter( 'pre_wp_mail', '__return_true' );\n" );
+set_theme_mod( 'navid_home_layout', 'market' );
+set_theme_mod( 'navid_accent', '#d92846' );
+set_theme_mod( 'navid_announcement', 'یک دنیا انتخاب، همین‌جا در نویدشاپ' );
+update_option( 'permalink_structure', '/%postname%/' );
+flush_rewrite_rules( false );
 wp_set_current_user( 0 );
 echo wp_json_encode( array( 'theme' => get_stylesheet(), 'products' => count( wc_get_products( array( 'limit' => -1, 'return' => 'ids' ) ) ), 'demo' => $result ), JSON_UNESCAPED_UNICODE );

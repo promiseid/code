@@ -1,3 +1,12 @@
+# 0.4.0 — Theme management and marketplace layout
+
+- Dedicated five-tab administration with native media selection, capability/nonce checks and validated settings.
+- Separate login companion: branded native form, optional custom route, emergency constant and independent fallback settings.
+- Original marketplace storefront, configurable accessible slider, shopping shortcuts, product discovery, real sale products and RTL mobile layout.
+- Preserved optional 3D studio; minified route-specific theme CSS and shared JS, with native Woo dependencies and 3D kept separate.
+- Removed confirmed unavailable products from browser-local saved IDs after successful API refresh.
+- Fresh install verification, source browser suite, docs, ZIPs and versioned blueprints.
+
 # 0.3.0 — Navid Studio
 
 - بازطراحی کامل بنر با فضای تیره، نورهای رنگی، حلقه‌های مداری و تصاویر متحرک.
