@@ -1,0 +1,29 @@
+{
+  "php": "8.3.33",
+  "files": {
+    "child-theme/navid-commerce-child/functions.php": "PASS",
+    "core-plugin/navid-commerce-core/navid-commerce-core.php": "PASS",
+    "demo-plugin/navid-commerce-demo/navid-commerce-demo.php": "PASS",
+    "playground/setup-demo.php": "PASS",
+    "tests/fixture.php": "PASS",
+    "theme/navid-commerce/404.php": "PASS",
+    "theme/navid-commerce/comments.php": "PASS",
+    "theme/navid-commerce/footer.php": "PASS",
+    "theme/navid-commerce/front-page.php": "PASS",
+    "theme/navid-commerce/functions.php": "PASS",
+    "theme/navid-commerce/header.php": "PASS",
+    "theme/navid-commerce/inc/admin.php": "PASS",
+    "theme/navid-commerce/inc/customizer.php": "PASS",
+    "theme/navid-commerce/inc/hero-studio.php": "PASS",
+    "theme/navid-commerce/inc/market-home.php": "PASS",
+    "theme/navid-commerce/inc/market-journal.php": "PASS",
+    "theme/navid-commerce/inc/market.php": "PASS",
+    "theme/navid-commerce/inc/shop-tools.php": "PASS",
+    "theme/navid-commerce/inc/template-tags.php": "PASS",
+    "theme/navid-commerce/inc/woocommerce.php": "PASS",
+    "theme/navid-commerce/index.php": "PASS",
+    "theme/navid-commerce/page.php": "PASS",
+    "theme/navid-commerce/searchform.php": "PASS",
+    "theme/navid-commerce/single.php": "PASS"
+  }
+}

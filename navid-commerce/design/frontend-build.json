@@ -1,0 +1,33 @@
+{
+  "version": "0.4.0",
+  "esbuild": "0.28.2",
+  "command": "npm install && npm run build",
+  "target": "ES2022",
+  "outputs": {
+    "assets/dist/frontend-home-market.min.css": {
+      "bytes": 93593,
+      "gzip_bytes": 18598,
+      "sha256": "f6e6417073a13c320afe91ab025ff5988a7fc542a7b3fc36d0af80cab7b7b92e"
+    },
+    "assets/dist/frontend-home-studio.min.css": {
+      "bytes": 68660,
+      "gzip_bytes": 14517,
+      "sha256": "1f6b0df51369fa928b4474411b3d3d7ac9e62eed2788f859819a19a78f0d0883"
+    },
+    "assets/dist/frontend-store-market.min.css": {
+      "bytes": 107532,
+      "gzip_bytes": 20821,
+      "sha256": "cc60c52ec6c1ac86a0e8bb00488985049a220077de02ecf962b50f52d4f333e8"
+    },
+    "assets/dist/frontend-store-studio.min.css": {
+      "bytes": 82599,
+      "gzip_bytes": 16744,
+      "sha256": "45e8fc72a6639b7492466d67a051f86e9b718016e0e28ad3b4c9b5ce4ea826c7"
+    },
+    "assets/dist/frontend.min.js": {
+      "bytes": 19905,
+      "gzip_bytes": 6026,
+      "sha256": "999f57f976b2125795990b76dee38179ba1ef826460d0f1e8c689243e312b9c9"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"name":"navid-commerce-build","private":true,"type":"module","scripts":{"build":"node tools/build-assets.mjs"},"devDependencies":{"esbuild":"0.28.2"}}

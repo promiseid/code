@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-21T04:56:18.414Z",
+  "complete": true,
+  "results": [
+    {
+      "name": "market storefront and one compiled theme CSS and JS entry",
+      "pass": true,
+      "detail": {
+        "products": 8,
+        "themeCSS": 1,
+        "themeJS": 1,
+        "threeDownloaded": false
+      },
+      "verifiedAt": "2026-10-21T04:54:26.466Z"
+    },
+    {
+      "name": "six responsive widths, fonts, real screenshots and accessible default storefront",
+      "pass": true,
+      "detail": {
+        "320": {
+          "overflow": false,
+          "brokenImages": 0
+        },
+        "360": {
+          "overflow": false,
+          "brokenImages": 0
+        },
+        "390": {
+          "overflow": false,
+          "brokenImages": 0
+        },
+        "768": {
+          "overflow": false,
+          "brokenImages": 0
+        },
+        "1200": {
+          "overflow": false,
+          "brokenImages": 0
+        },
+        "1440": {
+          "overflow": false,
+          "brokenImages": 0
+        }
+      },
+      "verifiedAt": "2026-10-21T04:54:52.844Z"
+    },
+    {
+      "name": "carousel controls and all three slide accessibility",
+      "pass": true,
+      "verifiedAt": "2026-10-21T04:54:56.281Z"
+    },
+    {
+      "name": "native category menu and mobile navigation support Escape",
+      "pass": true
+    },
+    {
+      "name": "quick view uses native dialog and restores focus",
+      "pass": true
+    },
+    {
+      "name": "wishlist persists and refreshes public Woo prices",
+      "pass": true
+    },
+    {
+      "name": "comparison uses real attributes and allows removal",
+      "pass": true
+    },
+    {
+      "name": "confirmed unavailable items do not leave stale saved IDs",
+      "pass": true
+    },
+    {
+      "name": "live search and normal form submission find actual products",
+      "pass": true
+    },
+    {
+      "name": "combined native price, stock, sale filters and category selection",
+      "pass": true
+    },
+    {
+      "name": "sorting, simple purchase, cart quantity and count",
+      "pass": true,
+      "detail": {
+        "quantity": 2
+      },
+      "verifiedAt": "2026-10-20T13:22:31.284Z"
+    },
+    {
+      "name": "native guest checkout creates a fictitious COD order",
+      "pass": true,
+      "detail": {
+        "realPayment": false,
+        "orderCreated": true
+      },
+      "verifiedAt": "2026-10-20T13:22:48.219Z"
+    },
+    {
+      "name": "real variable IDs and unavailable purchase state",
+      "pass": true
+    },
+    {
+      "name": "sticky purchase target and recently viewed product",
+      "pass": true
+    },
+    {
+      "name": "mobile catalog and product have no overflow or selected accessibility violations",
+      "pass": true
+    },
+    {
+      "name": "no-JavaScript catalog and reduced-motion fallback remain usable",
+      "pass": true
+    },
+    {
+      "name": "dedicated five-tab settings panel persists sanitized changes",
+      "pass": true,
+      "verifiedAt": "2026-10-21T04:51:25.123Z"
+    },
+    {
+      "name": "native WordPress media chooser opens and clearing works",
+      "pass": true,
+      "verifiedAt": "2026-10-20T13:23:59.750Z"
+    },
+    {
+      "name": "invalid nonce and anonymous settings writes are rejected",
+      "pass": true
+    },
+    {
+      "name": "reserved and malformed login slugs reject the complete update",
+      "pass": true,
+      "verifiedAt": "2026-10-21T04:51:55.487Z"
+    },
+    {
+      "name": "branded native login and optional custom route render",
+      "pass": true,
+      "verifiedAt": "2026-10-21T04:52:09.510Z"
+    },
+    {
+      "name": "old login closes; admin, lost password and invalid reset key use new route",
+      "pass": true
+    },
+    {
+      "name": "custom-route native authentication and nonce-protected logout work",
+      "pass": true
+    },
+    {
+      "name": "editor cannot access or save theme options even with an admin nonce",
+      "pass": true
+    },
+    {
+      "name": "emergency constant and query-string fallback preserve recovery",
+      "pass": true,
+      "verifiedAt": "2026-10-21T04:52:35.829Z"
+    },
+    {
+      "name": "login remains independent after theme switch; fallback restores original login",
+      "pass": true,
+      "verifiedAt": "2026-10-20T13:33:10.194Z"
+    },
+    {
+      "name": "editable banner and autoplay pause honor reduced motion",
+      "pass": true,
+      "verifiedAt": "2026-10-20T13:33:52.802Z"
+    },
+    {
+      "name": "studio option retains real WebGL model, color and keyboard controls",
+      "pass": true,
+      "verifiedAt": "2026-10-20T13:34:34.139Z"
+    },
+    {
+      "name": "child theme activation and graceful WooCommerce deactivation",
+      "pass": true
+    },
+    {
+      "name": "mobile administration and branded login fit and expose actual diagnostics",
+      "pass": true
+    },
+    {
+      "name": "no unhandled JavaScript errors in public shopping flows",
+      "pass": true
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Navid Commerce 0.3.0\n"
+"Project-Id-Version: Navid Commerce 0.4.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "MIME-Version: 1.0\n"
 
@@ -56,12 +56,8 @@ msgstr ""
 msgid "انتخاب آگاهانه از همین‌جا شروع می‌شود. جزئیات محصولات را ببینید و همراه مناسب خود را پیدا کنید."
 msgstr ""
 
-#: front-page.php
+#: front-page.php inc/market-journal.php
 msgid "انتخاب بهتر، با مجله نوید"
-msgstr ""
-
-#: inc/template-tags.php
-msgid "انتخاب خوب،"
 msgstr ""
 
 #: front-page.php
@@ -248,7 +244,7 @@ msgstr ""
 msgid "خرید آگاهانه"
 msgstr ""
 
-#: front-page.php
+#: front-page.php inc/market-journal.php
 msgid "خواندن نوشته"
 msgstr ""
 
@@ -340,6 +336,10 @@ msgstr ""
 msgid "شفاف، پیش از خرید"
 msgstr ""
 
+#: inc/template-tags.php
+msgid "شگفت‌انگیز"
+msgstr ""
+
 #: inc/customizer.php
 msgid "صحنه سه‌بعدی تعاملی صفحه نخست"
 msgstr ""
@@ -420,10 +420,6 @@ msgstr ""
 msgid "فیلترهای محصولات"
 msgstr ""
 
-#: inc/template-tags.php
-msgid "قیمت بهتر."
-msgstr ""
-
 #: front-page.php
 msgid "ما به انتخاب‌هایی فکر می‌کنیم که هر روز کنارمان هستند. مشخصات را بخوان، گزینه‌ها را ببین و چیزی را پیدا کن که با زندگی تو هماهنگ است."
 msgstr ""
@@ -436,7 +432,7 @@ msgstr ""
 msgid "متن پشتیبانی"
 msgstr ""
 
-#: front-page.php inc/template-tags.php index.php
+#: front-page.php inc/market-journal.php inc/template-tags.php index.php
 msgid "مجله نوید"
 msgstr ""
 
@@ -474,6 +470,10 @@ msgstr ""
 
 #: header.php
 msgid "مشاهده سبد خرید؛ %s کالا"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "مشاهده همه"
 msgstr ""
 
 #: inc/template-tags.php
@@ -576,7 +576,7 @@ msgstr ""
 msgid "همه محصولات"
 msgstr ""
 
-#: front-page.php
+#: front-page.php inc/market-journal.php
 msgid "همه نوشته‌ها"
 msgstr ""
 
@@ -586,6 +586,10 @@ msgstr ""
 
 #: inc/shop-tools.php
 msgid "پاک کردن فیلترها"
+msgstr ""
+
+#: inc/template-tags.php
+msgid "پیشنهادهای"
 msgstr ""
 
 #: inc/template-tags.php
@@ -620,12 +624,8 @@ msgstr ""
 msgid "کشف کالکشن"
 msgstr ""
 
-#: front-page.php
+#: front-page.php inc/market-journal.php
 msgid "کمی بیشتر بدانیم"
-msgstr ""
-
-#: inc/template-tags.php
-msgid "گشتی در فروشگاه"
 msgstr ""
 
 #: footer.php
