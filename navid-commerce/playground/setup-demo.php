@@ -21,6 +21,8 @@ update_option( 'woocommerce_enable_myaccount_registration', 'yes' );
 update_option( 'woocommerce_cod_settings', array( 'enabled' => 'yes', 'title' => 'پرداخت آزمایشی در محل', 'description' => 'فقط برای آزمون؛ پول واقعی دریافت نمی‌شود.' ) );
 update_option( 'woocommerce_ship_to_countries', 'disabled' );
 update_option( 'woocommerce_onboarding_profile', array( 'completed' => true ) );
+// Preview setup is complete: do not divert the first admin page to Woo onboarding.
+delete_transient( '_wc_activation_redirect' );
 update_option( 'woocommerce_task_list_hidden', 'yes' );
 update_option( 'woocommerce_coming_soon', 'no' );
 update_option( 'woocommerce_allow_tracking', 'no' );
